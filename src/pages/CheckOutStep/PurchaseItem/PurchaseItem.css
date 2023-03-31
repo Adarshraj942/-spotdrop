@@ -1,0 +1,45 @@
+#codcard{
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+
+    
+    border-color: transparent;
+    outline: transparent;
+    
+    background:  #FFFEFA;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.flexh{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+    
+}
+
+.flexr{
+    justify-content: left;
+}
+
+.flexl{
+    justify-content: right;
+}
+@media only screen and (max-width: 600px) {
+    .flexh{
+        display: inline;
+        justify-content: center;
+          
+      }
+      .flexr{
+        justify-content: center;
+    }
+    
+    .flexl{
+        justify-content: center;
+    }
+    .submitbutton{
+        margin-bottom: 100px;
+    }
+}

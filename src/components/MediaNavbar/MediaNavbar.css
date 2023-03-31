@@ -1,0 +1,92 @@
+#medianavbar{
+  display: none;
+}
+#mediainput{
+  display: none;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgba(255, 222, 0, 1);
+  overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  
+  display: flex;
+  color: rgba(0,0,0,1);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  
+  color: black;
+}
+
+
+.flexcenter input{
+  border-color: transparent;
+  border-radius: 10px;
+  outline: transparent;
+  width:80%
+}
+
+.flexcon{
+  background-color: rgba(255, 222, 0, 1);
+  padding:1rem 2rem ;
+  border-radius: 20px;
+  margin: 5px;
+  
+
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+@media only screen and (max-width : 500px)  {
+  #medianavbar{
+    display:inline-block;
+    width: 100%;
+    border-radius: 20px;
+  }
+  #mediainput{
+    display: block;
+    width: 80%;
+    resize: vertical;
+  }
+
+
+  .topnav {
+    background-color: rgba(255, 222, 0, 1);
+    overflow: hidden;
+    width: auto;
+    border-radius: 20px;
+  }
+
+  
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  #medianavbar{
+    display:inline-block;
+    width: 100%;
+    border-radius: 20px;
+  }
+  .topnav {
+    background-color: rgba(255, 222, 0, 1);
+    overflow: hidden;
+    width: auto;
+    border-radius: 20px;
+  }
+
+
+  
+
+  }
