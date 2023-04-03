@@ -1,5 +1,5 @@
 import axios from "axios";
-const API=axios.create({baseURL:"https://server.dropspot.in.in"})
+const API=axios.create({baseURL:"https://server.dropspot.in"})
 //const API=axios.create({baseURL:"http://localhost:5000"})
 
 export const createOrder=(data)=>API.post("/order/create",data)
