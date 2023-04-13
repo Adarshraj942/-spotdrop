@@ -3,8 +3,7 @@ import avatar from '../../assets/avatar.png'
 import MediaNavbar from '../../components/MediaNavbar/MediaNavbar'
 import leftarrow from '../../assets/leftarrow.png'
 
-import MediaFooter from '../../components/MediaFooter/MediaFooter'
-import MediaSourching from '../MediaSourching/MediaSourching'
+
 import {useHistory} from 'react-router-dom'
 
 function MediaSellerDashboard() {
@@ -120,7 +119,7 @@ function MediaSellerDashboard() {
   
 </div>
   </div>
-  <MediaFooter />
+
   </div>
   </>
   )

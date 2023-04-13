@@ -6,17 +6,21 @@
   #headerMediayo{
     display: none;
   }
-  .headerproduuctrecomand{
+  .headerproduuct{
     justify-content: center;
     padding:10px ;
     
     background-color:#FDE31A ;
-    width:300px ;
+    width:230px ;
     font-size: 20px;
     border-radius: 20px;
     margin-bottom:40px ;
     margin-top: 40px;
   }
+
+   
+  
+
 @media screen and (max-width: 500px) {
     #reomdProduct{
       display: flex;
@@ -44,17 +48,3 @@
 
   
       }
-      @media screen and (max-width: 300px) {
-        .headerproduuctrecomand{
-          justify-content: center;
-          padding:5px ;
-          
-          background-color:#FDE31A ;
-          width:200px ;
-          font-size: 20px;
-          border-radius: 30px;
-          margin-bottom:40px ;
-          margin-top: 40px;
-        }
-    
-        }

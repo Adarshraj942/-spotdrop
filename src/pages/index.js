@@ -16,10 +16,11 @@ import Partner from "../components/Partner/Partner";
 import MediaNavbar from "../components/MediaNavbar/MediaNavbar";
 
 import Hotsellingproducts from '../components/Hotsellingproducts/Hotsellingproducts'
-import MediaFooter from "../components/MediaFooter/MediaFooter";
+
 import Mediabutton from '../components/Mediabutton/Mediabutton'
 
 import MediaNavabarbutton from "../components/MediaNavabarbutton/MediaNavabarbutton";
+import MediaSuperDeals from "../components/MediaSuperDeals/MediaSuperDeals";
 
 import ScrollUpButton from '../components/ScrollUpButton/ScrollUpButton';
 import ShoppingCard from '../components/ShoppingCard/ShoppingCard';
@@ -51,10 +52,12 @@ const Home = () => {
       
 
        
-        <Hotsellingproducts />
+        {/* <Hotsellingproducts /> */}
         <TrendingHeader />
         <Trending  />
         <br />
+        
+        <MediaSuperDeals />
         <MoreProduct />
         <Shipping />
         <br />
@@ -64,8 +67,8 @@ const Home = () => {
         <br />
         <Review />
         <br />
-        <br />
-        <MediaFooter />
+        
+       
         <Footer />
         <ScrollUpButton />
         </div>

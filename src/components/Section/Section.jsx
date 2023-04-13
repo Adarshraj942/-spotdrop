@@ -173,7 +173,7 @@ function Section() {
               <li data-target="#myCarousel" data-slide-to={2} />
             </ol>
             {/* Wrapper for slides */}
-            <div className="carousel-inner" id="carasouelsection" style={{height:'450px'}}>
+            <div className="carousel-inner" id="carasouelsection" style={{height:'470px'}}>
               <div className="item active">
                 <img src={ecomerce} alt="Los Angeles" style={{width: '100%'}} />
               </div>
@@ -187,13 +187,13 @@ function Section() {
           </div>
           </div>
           <div className="flex-item-right6" style={{justifyContent:'right'}}>
-          <div className="container" id="carasouelsection" style={{padding:'10px 10px 10px 10px'}} >
+          <div className="container" id="carasouelsection" style={{padding:'10px 40px 10px 40px'}} >
             <div align="center" style={{margin:'5px 5px 5px 5px'}}><h3>How we work</h3></div>
           <div className="row"  >
             <div className="col-6" >
               <div align="center">
               <div><img src={freestore} alt="" /></div>
-              <div><b>Find store</b></div>
+              <div><b>Find <br /> store</b></div>
               </div>
               
             
@@ -201,7 +201,7 @@ function Section() {
             <div className="col-6">
             <div align="center">
               <div><img src={freeshipping} alt="" /></div>
-              <div><b>Fast Shipping</b></div>
+              <div><b>Fast <br /> Shipping</b></div>
             </div>
             </div>
           </div>
@@ -209,13 +209,13 @@ function Section() {
             <div className="col-6">
             <div align="center">
               <div> <img src={acadamy} alt="" /></div>
-              <div><b>Order Tracking</b></div>
+              <div><b>Order <br /> Tracking</b></div>
               </div>
             </div>
             <div className="col-6">
             <div align="center">
               <div><img src={fullfillment} alt="" /></div>
-              <div><b>24hrs Fullfillment</b></div>
+              <div><b>24hrs <br /> Fullfillment</b></div>
             </div>
             </div>
           </div>
@@ -223,13 +223,13 @@ function Section() {
             <div className="col-6">
             <div align="center">
               <div><img src={odm} alt="" /></div>
-              <div><b>Manage Order</b></div>
+              <div><b>Manage <br /> Order</b></div>
             </div>
             </div>
             <div className="col-6">
             <div align="center">
               <div><img src={video} alt="" /></div>
-              <div><b>Request Material</b></div>
+              <div><b>Request <br /> Material</b></div>
             </div>
               </div>
           </div>

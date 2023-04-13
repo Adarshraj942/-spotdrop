@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Trending.css";
 import { useHistory } from "react-router-dom";
+import Connection from '../.././pages/Connection/Connection'
 
 import connection from "../../assets/connection.png";
 import list from "../../assets/list.png";
@@ -32,6 +33,11 @@ function Trending() {
   const [products,setProduct]=useState([])
   const Productpage = () => {
       history.push(`/ProductPage/${products._id}`)
+  } 
+
+
+  const handleCheckOut = () => {
+      history.push(`/Connection/${products._id}`)
   } 
 
   const userData =localStorage.getItem("userId")
@@ -128,9 +134,7 @@ const handleClose = () => {
               <div className="col"  >
                 <div align="center"       
                   
-                     onClick={() => {
-                      history.push(`/ProductPage/${ele._id}`)
-                  } } className="cardcard" id="carasouelsection" style={{padding:'10px',width:'220px'}}>
+                   className="cardcard" id="carasouelsection" style={{padding:'10px',width:'220px'}}>
                   <div className="image" style={{width:'100%'}}>
                     
                     <img
@@ -180,7 +184,7 @@ const handleClose = () => {
                    
                       <div className="row" >
                         {" "}
-                        <div className="col" style={{width:"50%"}}> <button  align="left" className="connect"> <img src={connection} alt="" /> Connect</button></div>
+                        <div className="col" style={{width:"50%"}}> <button  align="left" className="connect" onClick={handleCheckOut}> <img src={connection} alt="" /> Connect</button></div>
                         <div className="col" style={{width:"50%"}}> <button align="right" className="listbtnlist" onClick={handleClickOpen} > <img src={list} alt="" /> List</button>
                           <Dialog   open={open} 
                               sx={{
@@ -267,7 +271,9 @@ const handleClose = () => {
       </Dialog>
  
   </div>
-  <div><span > <button className="discount" > + Queue </button> </span>{" "} </div>
+  <div><span > <button className="discount" onClick={()=>{
+                          history.push(`/checkout/${ele._id}`)
+                        }}   >Buy Now </button> </span>{" "} </div>
                        
                       </div>
 

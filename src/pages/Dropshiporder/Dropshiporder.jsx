@@ -4,15 +4,7 @@ import Sidebar from '../Sidebar/Sidebar'
 import Adminnavbar from '../Adminnavbar/Adminnavbar'
 function Dropshiporder() {
 
-    const stybtn={
-        backgroundColor:'#FFE51A',
-        borderColor:'transparent',
-        padding:'5px',
-        width:'100px',
-        fontWeight:'400',
-        fontColor:'black',
-        borderRadius:'10px'
-    }
+
 
     const skubnt={
         width:'300px',
@@ -71,11 +63,11 @@ function Dropshiporder() {
          }
         
   return (
-    <div  style={{backgroundColor:'#31343A',padding:'0px 0px 40px 0px'}}>
+    <div  style={{backgroundColor:'#31343A',padding:'0px 0px  0px'}}>
         <Adminnavbar />
         <div className='row'>
             <div className='col-2' style={{backgroundColor:'#32333A'}}><Sidebar /></div>
-            <div className='col-10'>
+            <div className='col-10'  style={{height:'800px'}}>
              <div className='container' id='tabcontainer' style={{  display: 'block',color:'black',borderRadius:'20px',width:'auto',margin:'20px 20px 20px 20px', border:"0.5px solid rgba(0, 0, 0, 0.25)" ,
     boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)',padding:'20px',}}>
                 <div className='Dashboardheading'><h3>Pre-Inventory Orders</h3></div>
@@ -111,35 +103,28 @@ function Dropshiporder() {
                 <div className='row'>
                 <div style={{marginTop:'20px'}}><p><button style={serchbtn}>Search</button><span><button style={Clearbtn} >Clear</button></span></p></div>
                 </div>
-                <div className='row' style={{backgroundColor:'#FFE627',padding:'5px',marginTop:'20px'}}>
-                    <div className='col'>Your Order Number
-                    {/* <div className='col-2'><p>Your Order number<span><select name="" id="" style={{width:'30px'}}  >
-                        <option value="all">All</option>
-                        <option value="">Store</option>
-                        <option value="">Excel imported</option>
-                        <option value="">Created</option>
-                        <option value="">Suplier</option>
-                        
-                        </select></span></p> */}
+                <div className='row' style={{backgroundColor:'#FFE627',padding:'5px',marginTop:'20px',borderRadius:'20px'}}>
+                    <div className='col-md-auto'>Your Order Number
+                    
                     </div>
-                    <div className='col'>
+                    <div className='col-md-auto'>
                         <button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Your order Time</button>
                     </div>
-                    <div className='col'>
+                    <div className='col-md-auto'>
                         <button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Seller ID</button>
                     </div>
-                    <div className='col'>
+                    <div className='col-md-auto'>
                         <button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Product Url</button>
                     </div>
                    
                     
-                    <div className='col-2'>
+                    <div className='col'>
                        
                         <p>Sku ID</p>
                         
                     </div>
                      <div className='col'><button style={{backgroundColor:'transparent',borderColor:'transparent'}} >Cost</button></div>   
-                    <div className='col'><button style={{backgroundColor:'transparent',borderColor:'transparent'}} >Available Stock</button></div>
+                    <div className='col-md-auto'><button style={{backgroundColor:'transparent',borderColor:'transparent'}} >Available Stock</button></div>
                     
                     <div className='col'><button style={{backgroundColor:'transparent',borderColor:'transparent'}} >action</button></div>
                 </div>

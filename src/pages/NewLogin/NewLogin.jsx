@@ -1,20 +1,19 @@
 import React , { useState }from 'react'
-import googleicon from '../../assets/googleicon.png'
-import facebookicon from '../../assets/facebookicon.png'
+
 import smart from '../../assets/smart.png'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar'
 import './NewLogin.css'
 import {LoginSocialFacebook} from "reactjs-social-login"
 import {FacebookLoginButton} from "react-social-login-buttons"
-import { login, signUp } from "../../Api/AuthRequest";
+import { login } from "../../Api/AuthRequest";
 import { useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 
 //import { useGoogleOneTapLogin } from "react-google-one-tap-login";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { GoogleLogin } from '@react-oauth/google';
-import MediaFooter from '../../components/MediaFooter/MediaFooter'
+
 import MediaNavbar from '../../components/MediaNavbar/MediaNavbar'
 
 
@@ -207,7 +206,7 @@ const NewLogin = () => {
   
     </div>
     <Footer />
-    <MediaFooter />
+ 
   </div>
  </>
   )

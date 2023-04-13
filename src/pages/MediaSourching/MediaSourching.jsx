@@ -10,7 +10,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import MediaNavbar from '../../components/MediaNavbar/MediaNavbar';
-import MediaFooter from '../../components/MediaFooter/MediaFooter';
+
 import leftarrow from '../../assets/leftarrow.png'
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -22,68 +22,6 @@ import { uploadCsv } from '../../Api/ProductRequest';
 
 
 
-const btnrow={
-  backgroundColor:'transparent',
-  borderColor:'transparent',
-  padding:'10px',
-  fontWeight:'400',
-  fontSize:'15px',
-  color:'black'
-}
-
-const skubnt={
-  width:'250px',
-  height:'35px',
-  borderColor:'transparent',
-
-  borderRadius: '20px',
-  backgroundColor:'rgba(231, 231, 231, 1)',
-  color: 'rgba(50, 51, 58, 1)',
-  fontSize: '15px',
-  paddingLeft: '20px',
-  outlineColor:'transparent', 
-  boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.15)',
-}
-
-
-
-const Clearbtn={
-  backgroundColor:'black',
-  borderColor:'transparent',
-  borderRadius:'10px',
-  color:'white',
-  padding:'10px',
-  
-
-  width:'150px',
-  fontWeight:'650',
-  boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.15)',
-}
-const serchbtn={
-  backgroundColor:'#FDE31A',
-  borderColor:'transparent',
-  borderRadius:'10px',
-  
-  padding:'10px',
-  outlineColor:'#FDE31A',
-  marginRight:'10px',
-  fontSize:'15px',
-  width:'150px',
-  fontWeight:'650',
-  boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.15)',
-  
-  
-   }
-
-
-
-const tranferbtn={
-  backgroundColor:'#FFE51A',
-  borderColor:'transparent',
-  padding:'5px',
-  borderRadius:'10px',
-  boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.15)',
-}
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -297,20 +235,9 @@ console.log(newPost);
   }
 
 
-  const buttonheader={
-    backgroundColor:'#FFE51A',
-    borderRadius:'15px',
-    width:'auto',
-    alignItems:'center',
-    height:'80px',
-    alignSelf:'center'
-    
-  }
 
-  const tabpanls={
-    padding:'30px',
 
-  }
+  
   const handelTabCLick = (e) => {
     setTabSelected(e);
   };
@@ -557,11 +484,11 @@ console.log(newPost);
 
 </div>
 
-<div  style={{display:'flex',justifyContent:'space-evenly',width:'auto',marginTop:'40px',marginBottom:'40px'}}>
-<div className='flexitemleft' style={{justifyContent:'left'}}>
-<div>
+<div  style={{justifyContent:'center',width:'auto',marginTop:'40px',marginBottom:'40px'}}>
+<div >
+<div align='center'>
 
-<button  onClick={handleClickOpen} style={{color:'black',borderColor:'transparent',backgroundColor:'rgba(253, 227, 26, 1)',borderRadius:'20px',fontSize:'15px',fontWeight:'800',padding:'10px',width:'150px'}} >Add Variations</button>
+<button  onClick={handleClickOpen} className='variatiobtn'>Add Variations</button>
 
 <Dialog open={open} onClose={handleClose}>
 <DialogTitle>Add Variations</DialogTitle>
@@ -631,12 +558,12 @@ console.log(newPost);
 </div>
 
 
-<div className='flexitemright' style={{justifyContent:'left'}} >
+<div  >
   <div > <button className='productbtn'>Add Product</button> </div>
 </div>
 </div>
 
-<div align='center' style={{justifyContent:'center',marginBottom:'40px'}} >
+<div  >
   <div > <button className='clearbtn'>Clear</button> </div>
 </div>
 
@@ -688,7 +615,7 @@ console.log(newPost);
       </TabPanel>
       
     </Box>
-    <MediaFooter />
+ 
   </>
   );
 }

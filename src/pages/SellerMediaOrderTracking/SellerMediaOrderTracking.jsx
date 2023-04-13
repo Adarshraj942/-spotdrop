@@ -1,7 +1,7 @@
 import React from 'react'
 import leftarrow from '../../assets/leftarrow.png'
 import MediaNavbar from '../../components/MediaNavbar/MediaNavbar'
-import MediaFooter from '../../components/MediaFooter/MediaFooter'
+
 const serchbtn={
     backgroundColor:'#FDE31A',
     borderColor:'transparent',
@@ -100,7 +100,7 @@ function SellerMediaOrderTracking() {
                </div>
         
         </div> 
-        <MediaFooter />
+     
     </div>
     </div>
   )

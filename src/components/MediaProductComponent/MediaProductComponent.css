@@ -81,7 +81,7 @@
 
       @media screen and (max-width: 300px){
         #cardsize{
-          width: 110px;
+          width: 100px;
           padding:10px 2px 2px 2px;
         }
         #cardsize img{

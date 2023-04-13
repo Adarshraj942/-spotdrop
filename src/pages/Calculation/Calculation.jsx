@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from '../../components/Navbar'
 import Shopnavbar from '../../components/ShopNavbar/Shopnavbar';
 import './Calculation.css'
@@ -7,32 +7,7 @@ import Footer from '../../components/Footer/Footer'
 
 function Calculation() {
 
-    const inputbox={
-        width:'300px',
-        outline:'#FFD600',
-        borderColor:'#FFD600',
-        height:'30px',
-        color:'black',
-        marginLeft:'30px'
 
-    }
-
-    const inputboxforth={
-        width:'300px',
-        outline:'#FFD600',
-        borderColor:'#FFD600',
-        height:'30px',
-        color:'black',
-         
-    }
-    const  inputboxfifth={
-        width:'300px',
-        outline:'#FFD600',
-        borderColor:'#FFD600',
-        height:'30px',
-        color:'black',
-        marginRight:'100px'  
-    }
     const calbtn={
        marginTop:'40px',
        marginLeft:'40px',

@@ -62,10 +62,8 @@ function Footer() {
 
                   <a className="text-white mb-2" href="/SellerDashboard"><i className="fa fa-angle-right mr-2" />Seller Dashboard</a>
                     <a className="text-white mb-2" href="/Helpcenter"><i className="fa fa-angle-right mr-2" />Help Center</a>
-                       <a className="text-white mb-2" href="/Layout"><i className="fa fa-angle-right mr-2" />Layout</a>
-                       <a className="text-white mb-2" href="/Layout"><i className="fa fa-angle-right mr-2" />
-                       <button  onClick={Checkout} >Connect</button>
-                       </a>
+
+                       
 
                     
                    

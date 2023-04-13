@@ -49,7 +49,7 @@ function PurchaseCart() {
     setTabSelected(e);
   };
   return (
-    <div style={{backgroundColor:'#31343A',padding:'0px 0px 100px 0px'}}>
+    <div style={{backgroundColor:'#31343A',padding:'0px 0px 0px' }}>
       <div>
         <Adminnavbar />
       </div>
@@ -57,7 +57,7 @@ function PurchaseCart() {
         <div className="col-2"  >
           <Sidebar />
         </div>
-        <div className="col-10">
+        <div className="col-10" style={{height:'800px'}}>
        
           <div
             className="container"

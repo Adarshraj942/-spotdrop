@@ -131,13 +131,13 @@ const coloumn=[
   <div style={{display:"flex" }}>
 
     {<>
-      <button className='button' style={{background:"#FFE51A",color:"black",borderColor:'transparent',marginLeft:"5px",padding:"10px",width:'50px',borderRadius:'5px',  boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.15)',}}
+      <button className='button' style={{background:"#FFE51A",color:"black",borderColor:'transparent',marginLeft:"5px",padding:"10px",width:'150px',borderRadius:'5px',  boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.15)',}}
       onClick={()=>alert()}
       >Edit</button>
-       <button className='button' style={{background:"#FFE51A",borderColor:'transparent',color:"black",marginLeft:"5px", padding:"10px",width:'60px',borderRadius:'5px',  boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.15)',}}
+       <button className='button' style={{background:"#FFE51A",borderColor:'transparent',color:"black",marginLeft:"5px", padding:"10px",width:'150px',borderRadius:'5px',  boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.15)',}}
       onClick={()=>alert()}
       >varient</button>
-       <button className='button' style={{background:"black",borderColor:'transparent',color:"white",marginLeft:"5px", padding:"10px",width:'100px',borderRadius:'5px',  boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.15)',}}
+       <button className='button' style={{background:"black",borderColor:'transparent',color:"white",marginLeft:"5px", padding:"10px",width:'150px',borderRadius:'5px',  boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.15)',}}
       onClick={()=>alert()}
       >Delete</button>
      
@@ -179,9 +179,10 @@ const coloumn=[
            <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',padding:'20px' }}>
             <div className='Dashboardheading'><h3>Sourching Inventory</h3></div>
                   <div className='row' style={{marginTop:'20px'}}>
+                    
                     <div className='col-6'>
-                    <div className='buttonIn'></div><input style={skubnt}  placeholder='Enter Product SKU'  type="text" name="" id="" /> <button style={serchbtn}   
-          >Search</button>
+                    <input style={skubnt}  placeholder='Enter Product SKU'  type="text" name="" id="" />
+                    <div style={{margin:'20px'}}> <button style={serchbtn}  >Search</button></div>
                     </div>
                     <div className='col-3'>
                     <p> Total Value:<span style={{margin:'10px'}} ><input type="checkbox" name="" id="" /></span> Product In Stock .</p>
@@ -194,25 +195,45 @@ const coloumn=[
                   
                   </div>
                   </div>
-                 <div className='container' style={{padding:'10px'}}>
-                 <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',padding:'10px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'10px',}}>
-                    <div className='col'><button style={btnrow}>Name</button></div>
+                  <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto',overflowX:'scroll' }}>
+           <div style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1200px'}}>
+             <div >
+             <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px' }}>
+             <div className='col'><button style={btnrow}>Name</button></div>
                     <div className='col'><button style={btnrow}>Id</button></div>
                     <div className='col'><button style={btnrow}>Price</button></div>
                     <div className='col'><button style={btnrow}>Quantity</button></div>
                     <div className='col'><button style={btnrow}>Action</button></div>
+               </div>
+               <div className="row" style={{width:'1200px'}}>
+             <DataTable 
+        
+        columns={coloumn} 
+        data={filterUsers} 
+        pagination
+      
+         
+        highlightOnHover
+      
+        
+      
+        // data={data}
+      />
+             </div>
+           
+             </div>
+           </div>
 
-                  </div>
-               
-
-                 </div>
+         </div>
             </Tab.Panel>
             <Tab.Panel>
             <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',padding:'20px' }}>
             <div className='row' >
             <div className='Dashboardheading'><h3>Connecting  Inventory</h3></div>
                     <div className='col-6'>
-                    <div className='buttonIn'></div><input style={skubnt} placeholder='Enter Product SKU'  type="text" name="" id="" /> <button style={serchbtn} >Search</button>
+                      <div><input style={skubnt} placeholder='Enter Product SKU'  type="text" name="" id="" /></div>
+                      <div style={{margin:'20px'}}><button style={serchbtn} >Search</button></div>
+                     
                     </div>
                     
                     <div className='col-6'>
@@ -220,16 +241,38 @@ const coloumn=[
                     </div>
                 </div>
             </div>
-           
-                <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',pading:'10px'}}>
-                    <div className='col'><button style={btnrow}>Product Name</button></div>
-                    <div className='col'><button style={btnrow}>SKU-ID</button></div>
+            <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto',overflowX:'scroll' }}>
+           <div style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1200px'}}>
+             <div >
+             <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px' }}>
+             <div className='col'><button style={btnrow}>Product Name</button></div>
+             <div className='col'><button style={btnrow}>SKU-ID</button></div>
                     <div className='col'><button style={btnrow}>Varient</button></div>
                     <div className='col'><button style={btnrow}>Dropshiper UserID </button></div>
                     <div className='col'><button style={btnrow}>Connected Store Domain</button></div>
                     <div className='col'><button style={btnrow}>Connected product link</button></div>
-                  
-                </div>
+               </div>
+               <div className="row" style={{width:'1200px'}}>
+             <DataTable 
+        
+        columns={coloumn} 
+        data={filterUsers} 
+        pagination
+      
+         
+        highlightOnHover
+      
+        
+      
+        // data={data}
+      />
+             </div>
+           
+             </div>
+           </div>
+
+         </div>
+           
             </Tab.Panel>
             <Tab.Panel>
 
@@ -242,35 +285,42 @@ const coloumn=[
               </div>
               <div style={{marginTop:'20px'}} ><p> <button style={serchbtn}>Search</button><span style={{margin:'10px'}} > <button style={Clearbtn} >Clear</button> </span></p></div>
             </div>
-           
-              <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',pading:'10px'}}>
-                    <div className='col'><button style={btnrow}>Product Name</button></div>
+            <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto',overflowX:'scroll' }}>
+           <div style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1400px'}}>
+             <div >
+             <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px' }}>
+             <div className='col'><button style={btnrow}>Product Name</button></div>
                     <div className='col'><button style={btnrow}>SKU-ID</button></div>
                     <div className='col'><button style={btnrow}>Varient</button></div>
                     <div className='col'><button style={btnrow}>Dropshiper UserID </button></div>
                     <div className='col'><button style={btnrow}>Connected Store Domain</button></div>
-                  
-                </div>
-          
-   
-            </Tab.Panel>
-          </Tab.Panels>
-    </Tab.Group>
-    <div style={{marginTop:"-55px" ,marginLeft:"25px"}}>
-    <DataTable 
+               </div>
+               <div className="row" style={{width:'1200px'}}>
+             <DataTable 
         
         columns={coloumn} 
         data={filterUsers} 
         pagination
       
-         style={{}}
+         
         highlightOnHover
       
         
       
         // data={data}
       />
-    </div>
+             </div>
+           
+             </div>
+           </div>
+
+         </div>
+           
+      
+            </Tab.Panel>
+          </Tab.Panels>
+    </Tab.Group>
+    
     
       </div> 
 

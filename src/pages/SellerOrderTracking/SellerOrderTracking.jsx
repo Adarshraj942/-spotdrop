@@ -56,48 +56,73 @@ function SellerOrderTracking() {
            
           
          }
+         const Pickbtn={
+          backgroundColor:'black',
+          borderColor:'transparent',
+          borderRadius:'10px',
+          color:'white',
+          padding:'10px',
+          outlineColor:'#FDE31A',
+          marginRight:'10px',
+          fontSize:'15px',
+          width:'130px',
+          fontWeight:'650',
+          boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+             
+         }
         
    
   return (
     <>
     <Adminnavbar />
-    <div className='row' style={{backgroundColor:'#32333A',padding:'0px 0px 100px 0px'}}>
+    <div className='row' style={{backgroundColor:'#31343A',padding:'0px 0px 0px',height:'800px'}}>
         <div className='col-2' >
             <SellerSidebar />
         </div>
         <div className='col-10'>
-         
-        <div className='container' id='tabcontainer' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px',width:'auto', margin:'10px 20px 20px 10px', padding:'20px',overflowX:'scroll' }}>
-            <div><h2>Order Tracking</h2></div>
-           <div className='row'>
-                <div className='col'>
-                <div>
-                <div className='row' style={{marginTop:'20px'}}>
-            <div className='col'><input style={skubnt} type="date" /></div>
+          
 
-            
-            <div className='col'><p><button style={serchbtn}>Search</button><span><button style={Clearbtn} >Clear</button></span></p></div>
-          </div>
-          <div className='row' style={{padding:'5px',marginTop:'20px',backgroundColor:'#FDE31A',borderRadius:'20px',width:'1700px'}}>
-            <div className='col-md-auto'><button style={Order}>	Date</button></div>
-            <div className='col-md-auto'><button style={Order}>	Order</button></div>
-            <div className='col-md-auto'><button style={Order}>Shipping<br /> Label Quantity</button></div>
-            <div className='col-md-auto'><button style={Order}>Dispatched <br /> (Normal/Abnormal)</button></div>
-            <div className='col-md-auto'><button style={Order}>En Route <br />(Normal/Abnormal)Shipping Method</button></div>
-            <div className='col-md-auto'><button style={Order}>Arrived <br />(Normal/Abnormal)</button></div>
-            <div className='col-md-auto'><button style={Order}>Out for <br /> Delivery(Normal/Abnormal)</button></div>
-            <div className='col-md-auto'><button style={Order}>Available for Pickup<br />(Normal/Abnormal)</button></div>
-            <div className='col-md-auto'><button style={Order}>Delivered</button></div>
-            <div className='col-md-auto'><button style={Order}>Action</button></div>
+          <div className='container' id="tabcontainer"  style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px',padding:'40px',width:'auto',margin:'20px 20px 20px 20px' }}>
+           <div><h2>Order Tracking</h2></div>
+          <div className='row'>
+               <div className='col' style={{marginTop:'20px'}}>
+               <div ><input style={skubnt} type="date" /></div>
+               <div>
+               <div className='row' >
+               <div className='row' style={{marginTop:'20px'}}>
+       <div className='col-2'><button style={serchbtn}>Search</button></div>
+       <div className='col-2'><button style={Pickbtn}> Clear</button></div>
+     </div>
 
 
-          </div>
-                </div>
-                
-                </div>
-            </div>
+         </div>
+         <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1000px' ,overflowX:'scroll'}}>
+           <div style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1000px' }}>
+             <div >
+             <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'2000px',marginRight:'100px' }}>
+             <div className='col'><button style={Order}>	Date</button></div>
+           <div className='col'><button style={Order}>	Order</button></div>
+           <div className='col-md-auto'><button style={Order}>Shipping<br /> Label Quantity</button></div>
+           <div className='col-md-auto'><button style={Order}>Dispatched <br /> (Normal/Abnormal)</button></div>
+           <div className='col-md-auto'><button style={Order}>En Route <br />(Normal/Abnormal)Shipping Method</button></div>
+           <div className='col-md-auto'><button style={Order}>Arrived <br />(Normal/Abnormal)</button></div>
+           <div className='col'><button style={Order}>Out for <br /> Delivery(Normal/Abnormal)</button></div>
+           <div className='col'><button style={Order}>Available for Pickup<br />(Normal/Abnormal)</button></div>
+           <div className='col'><button style={Order}>Delivered</button></div>
+           <div className='col'><button style={Order}>Action</button></div>
+               </div>
+           
+             </div>
            </div>
-        </div>
+
+         </div>
+         
+               </div>
+               
+               </div>
+           </div>
+          </div>
+           </div>
     </div>
     </>
   )

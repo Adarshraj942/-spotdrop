@@ -9,7 +9,7 @@ import etc from '../../assets/etc.png'
 
 function Authentication() {
   return (
-    <div  style={{backgroundColor:'#32333A'}}>
+    <div  style={{backgroundColor:'#31343A',padding:'0px 0px 0px 0px',height:'800px'}} >
         <Adminnavbar />
         <div className='row'>
             <div className='col-2' style={{borderColor:"10px solid yellow;"}} >
@@ -17,22 +17,22 @@ function Authentication() {
             </div>
             <div className='col-10'  >
                 <div className='container' id="tabcontainer" style={{margin:'10px 20px 10px 10px',width:'auto', padding:'30px'}}>
-                    <div className='flexl'>
+                    <div className='flexlcontainr'>
                         <div className='flexk'> <img src={iconone} alt="" /> Connect With Shopify</div>
                         <div className='fln'><button>Connect</button></div>
                     </div>
                     <hr />
-                    <div className='flexl'>
+                    <div className='flexlcontainr'>
                         <div className='flexk'><img src={etc} style={{height:'50px'}}   alt="" />  Connect with Etsy</div>
                         <div className='fln'><button>Connect</button></div>
                     </div>
                      <hr />
-                    <div className='flexl'>
+                    <div className='flexlcontainr'>
                         <div className='flexk'><img style={{height:'50px'}} src={wcom} alt="" />Connect with Woo Commerce</div>
                         <div className='fln'><button>Connect </button></div>
                     </div>
                      <hr />
-                    <div className='flexl'>
+                    <div className='flexlcontainr'>
                         <div className='flexk'> <img style={{height:'50px'}} src={ebay} alt="" />Connect with Ebay</div>
                         <div className='fln'><button>Connect </button></div>
                     </div>

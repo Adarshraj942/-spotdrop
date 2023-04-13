@@ -2,7 +2,7 @@ import React from 'react'
 import MediaNavbar from '../../components/MediaNavbar/MediaNavbar'
 import avatar from '../.././assets/avatar.png'
 import './MediaWishlist.css'
-import MediaFooter from '../../components/MediaFooter/MediaFooter'
+
 import { useHistory } from "react-router-dom";
 import leftarrow from '../../assets/leftarrow.png'
 
@@ -125,7 +125,7 @@ function MediaWishlist() {
       </div>
  </div>
     </div>
-    <MediaFooter />
+   
     </div>
   )
 }

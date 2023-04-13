@@ -4,7 +4,7 @@ import ebay from '../../assets/ebay.png'
 import wcom from '../../assets/wcom.png'
 import etc from '../../assets/etc.png'
 import './MediaAuthentication.css'
-import MediaFooter from '../../components/MediaFooter/MediaFooter'
+
 import MediaNavbar from '../../components/MediaNavbar/MediaNavbar'
 function MediaAuthentication() {
   return (
@@ -54,7 +54,7 @@ function MediaAuthentication() {
                   
                 </div>
     </div>
-    <MediaFooter />
+
    </>
   )
 }

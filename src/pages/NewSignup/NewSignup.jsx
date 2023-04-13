@@ -11,7 +11,7 @@ import Navbar from '../../components/Navbar';
 import Shopnavbar from '../../components/ShopNavbar/Shopnavbar';
 import { useHistory } from 'react-router-dom';
 import MediaNavbar from '../../components/MediaNavbar/MediaNavbar';
-import MediaFooter from '../../components/MediaFooter/MediaFooter';
+
 
 const NewSignup = () => {
   //user state
@@ -89,74 +89,77 @@ const NewSignup = () => {
                           }} > Back</button>
                           </div>
 
-                    <div className='contsiner' >
-                   
-                        <form  align="center" action="" onSubmit={handleSubmit}>
-                         
-                            <div align='center'  >
-                              
-                                <div className='formlabel' ><label htmlFor="" style={{marginTop:'20px'}}>Email</label></div>
-                                <div><input
-                                placeholder="Enter Your Email"
-                                type="email"
-                                name="email"
-                                value={user.email}
-                                onChange={handleChange}
-                                    className='inputbox20' /></div>
-                            </div>
-                            <div >
-                            <div className='formlabel'><label htmlFor="" style={{marginTop:'20px'}}>Password</label></div>
-                            <div><input  type="password "
-                            placeholder="Enter Your password"
-                            name="password"
-                            onChange={handleChange}
-                            value={user.password}
-                            className='inputbox20' /></div>
-                            </div>
-                            <div >
-                            <div className='formlabel'><label htmlFor="" style={{marginTop:'20px'}}>Confirm Password</label></div>
-                            <div><input type="password " 
-                            name="confirmpass"
-                            placeholder="Enter Your Confirm Password"
-                            onChange={handleChange}
-                            value={user.confirmpass}
-                            className='inputbox20' /></div>
-                            </div>
-                            <div >
-                            <div className='formlabel'><label htmlFor="" style={{marginTop:'20px'}}>Account Type</label></div>
-                            <div>
-                                <select className='inputbox20' onChange={handleChange} name=" accountType"  id="">
-                                    <option value="Seller">seller</option>
-                                    <option value="Dropshoper">Dropshoper</option>
-                                </select>
-                            </div>
-                            </div>
-                            <div >
-                      
 
-                            </div>
-                            <div style={{marginTop:'20px'}}><p><input type="checkbox"  className='checkbox-roundchecked'   
-                    name="privacyPolicy"
-                    id=""
-                    value={true}
-                    onChange={handleChange}
-                    /> <span align="center"> <label htmlFor="">By clicking "Next", you agree to the user <br /> agreement and privacy policy</label> </span> </p> 
-                 <div align="center" style={{marginTop:'30px'}}><div align="center" className='submitbtn'><button style={{backgroundColor:'transparent',borderColor:'transparent',}}>Submit</button></div></div>
-                    </div>
-                    <div align='center' className='Already'><h6 className='Already'>Already have an account?Sign In?</h6></div>
-                      <div className="or-container">
-                        <div className="line-separator" />
-                        <div className="or-label">or</div>
-                        <div className="line-separator" />
-                      </div>
-                      <div  className="flex-container">
-                        <div  className="flex-left"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}><img align="center" src={googleicon} alt="" /></button></div>
-                        <div  className="flex-right"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}><img  align="center" src={facebookicon} alt="" /></button></div>
-                      </div>
-                        
-                            
-                        </form>
-                    </div>
+                  <div align='center'>
+                  <div align="center" className='contsiner' >
+                   
+                   <form   action="" onSubmit={handleSubmit}>
+                    
+                       <div align='center'  >
+                         
+                           <div className='formlabel' ><label htmlFor="" style={{marginTop:'20px'}}>Email</label></div>
+                           <div><input
+                           placeholder="Enter Your Email"
+                           type="email"
+                           name="email"
+                           value={user.email}
+                           onChange={handleChange}
+                               className='inputbox20' /></div>
+                       </div>
+                       <div >
+                       <div className='formlabel'><label htmlFor="" style={{marginTop:'20px'}}>Password</label></div>
+                       <div><input  type="password "
+                       placeholder="Enter Your password"
+                       name="password"
+                       onChange={handleChange}
+                       value={user.password}
+                       className='inputbox20' /></div>
+                       </div>
+                       <div >
+                       <div className='formlabel'><label htmlFor="" style={{marginTop:'20px'}}>Confirm Password</label></div>
+                       <div><input type="password " 
+                       name="confirmpass"
+                       placeholder="Enter Your Confirm Password"
+                       onChange={handleChange}
+                       value={user.confirmpass}
+                       className='inputbox20' /></div>
+                       </div>
+                       <div >
+                       <div className='formlabel'><label htmlFor="" style={{marginTop:'20px'}}>Account Type</label></div>
+                       <div>
+                           <select className='inputbox20' onChange={handleChange} name=" accountType"  id="">
+                               <option value="Seller">seller</option>
+                               <option value="Dropshoper">Dropshoper</option>
+                           </select>
+                       </div>
+                       </div>
+                       <div >
+                 
+
+                       </div>
+                       <div style={{marginTop:'20px'}}><p><input type="checkbox"  className='checkbox-roundchecked'   
+               name="privacyPolicy"
+               id=""
+               value={true}
+               onChange={handleChange}
+               /> <span align="center"> <label htmlFor="">By clicking "Next", you agree to the user <br /> agreement and privacy policy</label> </span> </p> 
+            <div align="center" style={{marginTop:'30px'}}><div align="center" className='submitbtn'><button style={{backgroundColor:'transparent',borderColor:'transparent',}}>Submit</button></div></div>
+               </div>
+               <div align='center' className='Already'><h6 className='Already'>Already have an account?Sign In?</h6></div>
+                 <div className="or-container">
+                   <div className="line-separator" />
+                   <div className="or-label">or</div>
+                   <div className="line-separator" />
+                 </div>
+                 <div  className="flex-container" style={{display:'flex',justifyContent:'center',paddingBottom:'20px'}}>
+                   <div  className="flex-left"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}><img align="center" src={googleicon} alt="" /></button></div>
+                   <div  className="flex-right"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}><img  align="center" src={facebookicon} alt="" /></button></div>
+                 </div>
+                   
+                       
+                   </form>
+               </div>
+                  </div>
                 </div>
                 <ToastContainer />
                 <div className='flex-rightsign'  >
@@ -167,7 +170,7 @@ const NewSignup = () => {
                   </div>
             </div>
         <Footer />
-        <MediaFooter />
+       
       
     </div>
     </>

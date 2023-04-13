@@ -228,3 +228,46 @@
     padding-top:50px;
     padding-bottom: 20px;
   }
+
+  @media only screen and (max-width : 300px) {
+    .inputfield20{
+        height: 50px;
+        border-radius: 86px;
+        border-color: transparent;
+        background-color: rgba(231, 231, 231, 1);
+        color: rgba(50, 51, 58, 1);
+        font-size: 15px;
+        padding-left: 20px;
+        width:220px;  
+    }
+    .clearbtn{
+        background-color:black;
+        padding: 10px;
+        color:white;
+        width: 150px;
+        border-color: transparent;  
+        border-radius: 20px; 
+        margin-bottom: 40px;
+    }
+    
+    .productbtn{
+        background-color:rgba(253, 227, 26, 1) ;
+        padding: 10px;
+        width: 150px;
+        border-color: transparent;  
+        border-radius: 20px; 
+        font-weight: 800;
+    }
+    .variatiobtn{
+        color:black;
+        border-color: transparent;
+        background-color: rgba(253, 227, 26, 1);
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: 650;
+        padding: 10px;
+        width: 150px;
+        margin-bottom: 20px;
+    }
+ 
+  }

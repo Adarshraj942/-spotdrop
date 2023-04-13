@@ -14,6 +14,12 @@ import '../../components/Footer/Footer'
 import { getProduct } from '../../Api/ProductRequest'
 import Footer from '../../components/Footer/Footer'
 
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+
 
 import Tab from 'react-bootstrap/Tab';
 
@@ -137,7 +143,23 @@ function ProductPage() {
       // ...
     }
     fetchData();
-  }, []); // Or [] if effect doesn't need props or state
+  }, []); 
+  // Or [] if effect doesn't need props or state
+  const [open, setOpen] = React.useState(false);
+
+const handleClickOpen = () => {
+  setOpen(true);
+};
+
+const handleClose = () => {
+  setOpen(false);
+};
+const subbtn={
+  backgroundColor:'rgba(253, 227, 26, 1)',fontWeight:'800',padding:'5px',color:'black',width:'200px',borderColor:'transparent', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",marginLeft:'20px',borderRadius:'5px'
+}
+const subbtnlist={
+  backgroundColor:'rgba(253, 227, 26, 1)',fontWeight:'800',padding:'5px',color:'black',width:'100px',borderColor:'transparent', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",marginLeft:'20px',borderRadius:'5px'
+}
   return (
     <>
     <Navbar />
@@ -152,11 +174,7 @@ function ProductPage() {
 
            
             <div className="col-lg-4 left-side-product-box pb-3">
-            <div align="center" className='row' >
-              <div className='col'><button  style={displaybtn}> Display</button></div>
-             
-              <div className='col'> <button style={inventerybtn}>Inventory</button> </div>
-            </div>
+            
               <img src={post.image1?"https://server.dropspot.in/images/"+post.image1:""} style={{marginTop:"20px"}}/>
               <span className="sub-img">
                 <img src={post.image2?"https://server.dropspot.in/images/"+post.image2:""} />
@@ -223,7 +241,7 @@ function ProductPage() {
                     </div>
                    </div>
                   </div>
-                     <button style={{backgroundColor:'#FDE31A',fontSize:'15px',fontWeight:'800',borderRadius:'30px',color:'black',width:'200px',height:'50px',borderColor:'transparent',marginTop:'30px', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)" }}>Product Price:₹{post.price}</button>
+                     <button style={{backgroundColor:'#FDE31A',fontSize:'15px',borderRadius:'10px',color:'black',width:'220px',height:'50px',borderColor:'transparent',marginTop:'30px', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)" }}> <b>Product Price :</b>   ₹{post.price}</button>
                     </div>
                       
                     <div className="col">
@@ -275,8 +293,91 @@ function ProductPage() {
                           history.push(`/checkout/${post._id}`)
                         }} >Buy Now</button>
                         <button style={btnbuy} onClick={Checkout} >Connect</button>
-                        <button style={btnbuy}>List</button>
-                        <button style={btnbuy}>Queue</button>
+                        <button style={btnbuy} onClick={handleClickOpen}>List</button>
+                        <Dialog   open={open} 
+                              sx={{
+                                "& .MuiDialog-container": {
+                                  "& .MuiPaper-root": {
+                                    width: "100%",
+                                    maxWidth: "1500px",  // Set your width here
+                                  },
+                                },
+                              }}
+                             onClose={handleClose}>
+        <DialogTitle></DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+          </DialogContentText>
+            <div className="container" >
+              
+              <div className="flexcontinaer" style={{width:'300px'}}>
+                <div className="flexleft" style={{marginTop:'10px'}}>
+                <h5>Store</h5>
+                </div>
+                <div className="flexright">
+                <select className="Selectbox" name="" id="">
+                    <option value=""></option>
+                     <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                </div>
+              </div>
+            </div>
+           
+            <div align="center" className="row" style={{width:'1000px',marginTop:'20px'}} >
+              <div className="col-2"><button className="bulkbtn">Bulk Revise</button></div>
+              <div className="col-4"><button className="bulkbtnprice">Price Change</button></div>
+              <div className="col-2"> <input className="inputflied" type="text" /> </div>
+              <div className="col-2"><button className="bulkbtnok">OK</button></div>
+              <div className="col-2"><button className="bulkbtnrec">Recommended Listed Price </button></div>
+            </div>
+            <div align="middle" className="row" style={{backgroundColor:'rgba(255, 214, 0, 1)',marginTop:'40px',padding:'10px',borderRadius:'20px'}}>
+              <div className="col"><input style={{width:'20px',height:'20px'}} type="checkbox" /></div>
+              <div className="col"><button className="buttonbox">Image</button></div>
+              <div className="col"><button className="buttonbox">Sku</button></div>
+              <div className="col"><button className="buttonbox"> Catogory</button></div>
+
+              <div className="col"><button className="buttonbox">MRP</button></div>
+              <div className="col-md-auto"><button className="buttonbox">Shipping Fee</button></div>
+              <div className="col-2"><button className="buttonbox">Service fee</button></div>
+              <div className="col-md-auto"><button className="buttonbox" >Total Dropshipping Cost</button></div>
+              <div className="col"><button className="buttonbox">Price</button></div>
+            </div>
+            <div align="middle" className="row" style={{backgroundColor:'rgba(217, 217, 217, 1)',marginTop:'40px',padding:'10px',borderRadius:'20px'}}>
+              <div className="col"><input style={{width:'20px',height:'20px'}} type="checkbox" /></div>
+              <div className="col"><button className="buttonbox">Image</button></div>
+              <div className="col"><button className="buttonbox">Sku</button></div>
+              <div className="col"><button className="buttonbox"> Catogory</button></div>
+
+              <div className="col"><button className="buttonbox">MRP</button></div>
+              <div className="col-md-auto"><button className="buttonbox">Shipping Fee</button></div>
+              <div className="col-2"><button className="buttonbox">Service fee</button></div>
+              <div className="col-md-auto"><button className="buttonbox" >Total Dropshipping Cost</button></div>
+              <div className="col"><button className="buttonbox">Price</button></div>
+            </div>
+              <div className="row" style={{backgroundColor:'rgba(0, 0, 0, 1)',marginTop:'40px',padding:'20px',borderRadius:'20px'}}>
+             
+              <div className="col"><button className="buttonboxsecond">Estimated Delvery Time</button></div>
+              <div className="col"><button className="buttonboxrange">Time range</button></div>
+              <div className="col"><button className="buttonboxsecond"> Shipping Cost</button></div>
+              <div className="col"><button className="buttonboxcost">₹Cost</button></div>
+              <div className="col"><button className="buttonboxTcking">Tracking Information :</button></div>
+              <div className="col"><button className="Availblity">Available</button></div>
+            </div>
+         
+        </DialogContent>
+        <DialogActions >
+          <div align="center" style={{marginRight:'33%',display:'flex',marginBottom:'10px'}}>
+          <div ><button style={{backgroundColor:'black',padding:'5px',color:'white',width:'100px',borderColor:'transparent', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'5px' }} onClick={handleClose}>Cancel</button></div>
+          <div ><button style={subbtnlist} onClick={handleClose}>List Now</button></div>
+          <div ><button style={subbtn} onClick={handleClose}>Listing Before Edit</button></div>
+          </div>
+
+       
+         
+        </DialogActions>
+      </Dialog>
+                        
                         <button style={btnbuy}
                           onClick={
                             ()=>{

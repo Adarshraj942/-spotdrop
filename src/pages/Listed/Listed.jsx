@@ -72,13 +72,13 @@ const Product={
 
   const [tabSelected, setTabSelected] = useState(null);
   return (
-    <div style={{backgroundColor:'#31343A',padding:'0px 0px 40px 0px'}}>
+    <div style={{backgroundColor:'#31343A',padding:'0px 0px 0px 0px'}}>
         <Adminnavbar />
         <div className='row'>
             <div className='col-2' style={{backgroundColor:'#31343A'}}>
                 <Sidebar />
             </div>
-            <div className='col-10'>
+            <div className='col-10' style={{height:'800px'}}>
                 <div className='container' id="tabcontainer" style={{margin:'20px 0px 20px 10px',width:'1100px', padding:'20px',}}>
                 <div className='headingAll'><h2>Listing</h2></div>
                     <Tab.Group>
@@ -95,14 +95,14 @@ const Product={
                     onClick={() => handelTabCLick(4)}>Listing Failed</Tab>
                                 
                             
-                            </Tab.List>
+                    </Tab.List>
                         </div>
                             
                         
                         
-                        <Tab.Panels style={tabpanls}>
-                            <Tab.Panel>
-                            <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',padding:'20px' }}>
+        <Tab.Panels style={tabpanls}>
+         <Tab.Panel>
+                            <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px',padding:'20px'}} >
                             <div className='Dashboardheading'><h3>Listed</h3></div>
                             <div className='row' style={{marginTop:'20px'}}>
                                             <div className='col'><select style={skubntdate}  name="AllStores" id="AllStores">
@@ -113,25 +113,34 @@ const Product={
                                             <div className='col'><input style={skubntdate} placeholder='Enter SKU/Product name' type="text" name="" id="" /></div>
                                             
                                         </div>
-                                        <div style={{marginTop:'20px'}}><button style={serchbtn}>Search</button></div>   
-                            </div>
+                                        <div style={{marginTop:'20px'}}><button style={serchbtn}>Search</button></div>  
+       
+               
+         </div>
+         <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1000px' ,overflowX:'scroll'}}>
+           <div style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1000px' }}>
+             <div >
+             <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1800px',marginRight:'100px' }}>
+             <div className='col'><button style={productbtn}>Products</button></div>
+                <div className='col'><button  style={productbtn}>Store Name</button></div>
+                <div className='col'><button  style={productbtn}>Price</button></div>
+                <div className='col'><button  style={productbtn}>Weight</button></div>
+                <div className='col'><button  style={productbtn}>Shipping From</button></div>
+                <div className='col'><button  style={productbtn}>Shippping Method</button></div>
+                <div className='col'><button  style={productbtn}>Shippping Cost</button></div>
+                <div className='col'><button  style={productbtn}>Amount</button></div>
+                <div className='col'><button  style={productbtn}>Action</button></div>
+               </div>
+           
+             </div>
+           </div>
 
-                                      
-                                        <div className='row' style={{marginTop:'20px' ,backgroundColor: '#FDE31A',padding:'10px'}}>
-                                            <div className='col'><button style={productbtn}>Products</button></div>
-                                            <div className='col'><button  style={productbtn}>Store Name</button></div>
-                                            <div className='col'><button  style={productbtn}>Price</button></div>
-                                            <div className='col'><button  style={productbtn}>Weight</button></div>
-                                            <div className='col'><button  style={productbtn}>Shipping From</button></div>
-                                            <div className='col'><button  style={productbtn}>Shippping Method</button></div>
-                                            <div className='col'><button  style={productbtn}>Shippping Cost</button></div>
-                                            <div className='col'><button  style={productbtn}>Amount</button></div>
-                                            <div className='col'><button  style={productbtn}>Action</button></div>
-                                        </div>
-                                        <div className='row' style={{marginLeft:'400px',marginTop:'40px'}}>
-                                            <div><button  style={Product}>Add Products</button></div>
-                                        </div>
-                            </Tab.Panel>
+         </div>
+         
+            <div className='row' style={{marginLeft:'400px',marginTop:'40px'}}>
+           <div><button  style={Product}>Add Products</button></div>
+             </div>
+                 </Tab.Panel>
                             <Tab.Panel>
                             <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',padding:'20px' }}>
                             <div className='Dashboardheading'><h3>On Listing</h3></div>
@@ -146,34 +155,57 @@ const Product={
                                         </div>
                                         <div style={{marginTop:'20px'}}><button style={serchbtn}>Search</button></div>
                             </div>
+                            <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1000px' ,overflowX:'scroll'}}>
+           <div style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' }}>
+             <div >
+             <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1200px',marginRight:'100px' }}>
+             <div className='col'><button style={productbtn}>Products</button></div>
+                <div className='col'><button  style={productbtn}>Store Name</button></div>
+               <div className='col'><button  style={productbtn}>Price</button></div>
+                <div className='col'><button  style={productbtn}>Shipping From</button></div>
+                <div className='col'><button  style={productbtn}>Shippping Method</button></div>
+                <div className='col'><button  style={productbtn}>Status</button></div>
+               </div>
+           
+             </div>
+           </div>
 
-                                        <div className='row' style={{marginTop:'20px',  backgroundColor: '#FDE31A',padding:'10px'}}>
-                                            <div className='col'><button style={productbtn}>Products</button></div>
-                                            <div className='col'><button  style={productbtn}>Store Name</button></div>
-                                            <div className='col'><button  style={productbtn}>Price</button></div>
-                                            <div className='col'><button  style={productbtn}>Shipping From</button></div>
-                                            <div className='col'><button  style={productbtn}>Shippping Method</button></div>
-                                            <div className='col'><button  style={productbtn}>Status</button></div>
-                                            
-                                        </div>
-                                        <div className='row' style={{marginLeft:'400px',marginTop:'40px'}}>
-                                            <div><button  style={Product}>Add Products</button></div>
-                                        </div>
+         </div>
+
+            <div className='row' style={{marginLeft:'400px',marginTop:'40px'}}>
+                <div><button  style={Product}>Add Products</button></div>
+             </div>
                             </Tab.Panel>
                             <Tab.Panel>
                             <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',padding:'20px' }}>
                             <div className='Dashboardheading'><h3>Queue</h3></div>
-                              
-                            </div>
-                            <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',padding:'5px'}}>
-                                        <div className='col'>
+                            <div className='row' style={{marginTop:'20px'}}>
+                            <div className='col'>
                                     <p> <span ><input type="checkbox" /></span> Products</p>
                                         </div>
                                         <div className='col' style={{color:'black'}}>Price</div>
                                         <div className='col' style={{color:'black'}}>Action</div>
-                                    </div>
-                            
-                            </Tab.Panel>
+                                            
+                                        </div>
+                                        <div style={{marginTop:'20px'}}><button style={serchbtn}>Search</button></div>
+                            </div>
+                            <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1000px' ,overflowX:'scroll'}}>
+           <div style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' }}>
+             <div >
+             <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1200px',marginRight:'100px' }}>
+             <div className='col'><button style={productbtn}>Products</button></div>
+                   <div className='col'><button  style={productbtn}>Store Name</button></div>
+                   <div className='col'><button  style={productbtn}>Price</button></div>
+                  <div className='col'><button  style={productbtn}>Shipping from</button></div>
+                <div className='col'><button  style={productbtn}>Shipping Method</button></div>
+                <div className='col'><button  style={productbtn}>Status</button></div>
+               </div>
+           
+             </div>
+           </div>
+
+         </div>
+        </Tab.Panel>
                             <Tab.Panel>
                             <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',padding:'20px' }}>
                             <div className='Dashboardheading'><h3>Listing Failed</h3></div>
@@ -191,17 +223,8 @@ const Product={
 
                           
                                        
-                                        <div className='row' style={{marginTop:'20px' ,backgroundColor: '#FDE31A',padding:'10px'}}>
-                                            <div className='col'><button style={productbtn}>Products</button></div>
-                                            <div className='col'><button  style={productbtn}>Store Name</button></div>
-                                            <div className='col'><button  style={productbtn}>Price</button></div>
-                                            <div className='col'><button  style={productbtn}>Shipping from</button></div>
-                                            <div className='col'><button  style={productbtn}>Shipping Method</button></div>
-                                            <div className='col'><button  style={productbtn}>Status</button></div>
-                                        </div>
-                                        <div className='row' style={{marginLeft:'450px',marginTop:'100px'}}>
-                                            
-                                        </div>
+                                       
+                                        
                             </Tab.Panel>
                         </Tab.Panels>
                         

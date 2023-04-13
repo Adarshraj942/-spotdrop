@@ -1,6 +1,6 @@
 import React from "react";
 
-import Navbar from "./components/Navbar";
+
 
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages";
@@ -11,10 +11,10 @@ import HelpCenter from "./pages/HelpCenter/HelpCenter";
 
 
 
-import Signup  from "./pages/Signup/Signup";
+
 import Otp from "./components/Otp/Otp"
 import catagories from './pages/catagories';
-import signin from "./pages/Signin/Signin";
+
 
 import ProductListing from "./pages/ProductListing/ProductListing"
 import ProductPage from "./pages/ProductPage/ProductPage";
@@ -22,7 +22,7 @@ import ShippingCost from "./pages/ShippingCost/ShippingCost";
 import MediaProductpage from "./pages/MediaProductpage/MediaProductpage";
 import MediaProductlisting from './pages/MediaProductlisting/MediaProductlisting';
 
-import MyCj from "./pages/MyCj";
+import MyDropspot from "./pages/MyDropspot";
 import Sourcingpage from './pages/Sourcingpage/Sourcingpage';
 import Purchaselisting from './pages/Purchaselisting/Purchaselisting'
 
@@ -85,7 +85,7 @@ import SellerDispute from './pages/SellerDispute/SellerDispute'
 import SellerUndeleviredOrder from './pages/SellerUndeleviredOrder/SellerUndeleviredOrder'
 import SellerOrderTracking from './pages/SellerOrderTracking/SellerOrderTracking'
 import SellerCart from './pages/SellerCart/SellerCart'
-import Layout from './components/Layout/index'
+
 
 import Authentication from './pages/Authentication/Authentication'
 import Checkout from './pages/Checkout/Checkout'
@@ -105,12 +105,12 @@ import SellerMediaWishlist from './pages/SellerMediaWishlist/SellerMediaWishlist
 import PurchaseItem from "./pages/CheckOutStep/PurchaseItem/PurchaseItem";
 
 function App() {
-  const userInfo = localStorage.getItem("userInfo");
+ 
  
  // alert()
   return (
     <>
-     {/* <Navbar />*/}
+    
      
       <Switch>
 
@@ -129,7 +129,7 @@ function App() {
         <Route path="/verifymobile" component={Otp} />
       <Route path="/Signup" component={NewSignup} />
         <Route path="/catagories" component={catagories} />
-        <Route path="/MyDropspot" component={MyCj} />
+        <Route path="/MyDropspot" component={MyDropspot} />
         <Route path="/ProductListing" component={ProductListing} />
         <Route path="/ProductPage/:id" component={ProductPage} />
         <Route path="/ShippingCost" component={ShippingCost} />
@@ -197,7 +197,7 @@ function App() {
         <Route path="/SellerUndeleviredOrder" component={SellerUndeleviredOrder}></Route>
         <Route path="/SellerOrderTracking" component={SellerOrderTracking}></Route>
         <Route path="/SellerCart" component={SellerCart}></Route>
-        <Route path="/Layout" component={Layout}></Route>
+        
         <Route path="/Authentication" component={Authentication}></Route>
         <Route path="/Checkout/:id" component={Checkout}></Route>
         <Route path="/MediaConnection" component={MediaConnection}></Route>

@@ -18,26 +18,10 @@ const Disputeslist = () => {
             fontSize:'15px',
             fontWeight:'400'
           }
-          
-          const box={
-            width:'300px',
-            borderColor:'#FDE31A',
-            outline:'#FDE31A',
-            borderRadius:'20px'
-          }
+     
     
-          const boxrim={
-            width:'100px',
-            borderColor:'#FDE31A',
-            outline:'#FDE31A',
-            borderRadius:'20px'  
-          }
-          const boxnim={
-            width:'100px',
-            borderColor:'#FDE31A',
-            outline:'#FDE31A',
-            borderRadius:'20px'  
-          }
+       
+       
           const clearbtn={
             backgroundColor:'',
             borderColor:'#FDE31A',

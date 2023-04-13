@@ -164,7 +164,7 @@ const coloumn=[
   return (
     <>
     <Adminnavbar />
-    <div className='row' style={{backgroundColor:'#32333A',padding:'0px 0px 100px 0px'}}>
+    <div className='row' style={{backgroundColor:'#32333A',padding:'0px 0px 0px 0px'}}>
         <div className='col-2' >
            <SellerSidebar />
         </div>
@@ -219,14 +219,15 @@ const coloumn=[
           </div>
         </div>
        
-        <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1000px' ,overflowX:'scroll'}}>
+        <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' ,overflowX:'scroll'}}>
 
            
           <div style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1000px' }}>
-          <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1200px',marginRight:'100px' }}>
+          <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1520px',marginRight:'100px' }}>
                  <div className='col'><button style={Order}>Your Order Number</button></div>
 
                  <div className='col'><button style={Order}>Status</button></div>
+                 <div className='col'><button style={Order}>Product Name</button></div>
                  <div className='col'><button style={Order}>Quantity</button></div>
                  <div className='col'><button style={Order}>Shipping Method</button></div>
                  <div className='col'><button style={Order}>Tracking Number</button></div>
@@ -235,7 +236,7 @@ const coloumn=[
 
 
                </div>
-
+               <div className='row' style={{padding:'7px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1400px',marginRight:'100px' }}>
                <DataTable 
         
         columns={coloumn} 
@@ -249,6 +250,9 @@ const coloumn=[
       
         // data={data}
       />
+               </div>
+
+          
           </div>
            </div>
 
@@ -257,8 +261,8 @@ const coloumn=[
           </Tab.Panel>
            <Tab.Panel>
             
-           <div className='container'  style={{ display: 'block',color:'black',borderRadius:'30px',overflowX:'scroll' }}>
-            <div style={{ display: 'block',color:'black',padding:'20px',borderRadius:'30px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)"}}>
+           <div style={{ display: 'block',color:'black',borderRadius:'30px',}}>
+            <div className="container" style={{ display: 'block',color:'black',padding:'20px',borderRadius:'30px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)"}}>
             <div className='Dashboardheading'><h3>Awaiting Payments</h3></div>
            <div className='row' style={{marginTop:'20px'}}>
              <div className='col'><input style={skubnt} type="date" /></div>
@@ -283,12 +287,13 @@ const coloumn=[
             </div>
          
 
-           
-           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1200px' }}>
-            <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1100px',marginRight:'100px'}}>
+           <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' ,overflowX:'scroll'}}>
+           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1100px' }}>
+            <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1200px',marginRight:'100px'}}>
               <div className='col'><button style={Order}>Your Order Number</button></div>
               
               <div className='col'><button style={Order}>Status</button></div>
+              <div className='col'><button style={Order}>Product Name</button></div>
               <div className='col'><button style={Order}>Quantity</button></div>
             
             
@@ -298,10 +303,12 @@ const coloumn=[
 
             </div>
            </div>
+           </div>
+           
            </div> 
            </Tab.Panel>
            <Tab.Panel>
-           <div className='container' style={{ display: 'block',color:'black',borderRadius:'30px',overflowX:'scroll'  }}>
+           <div className='container' style={{ display: 'block',color:'black',borderRadius:'30px' }}>
            <div style={{ display: 'block',color:'black',padding:'20px',borderRadius:'30px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)"}}>
            <div className='Dashboardheading'><h3>Pending</h3></div>
 
@@ -318,8 +325,8 @@ const coloumn=[
            </div>
         <div className='row' style={{marginTop:'20px'}}>
    
-                 <div className='col'><input style={skubnt} placeholder='please enter order number' type="text" /></div>
-                 <div className='col'>
+                 <div className='col-4'><input style={skubnt} placeholder='please enter order number' type="text" /></div>
+                 <div className='col-4'>
                  <select  style={skubntselect}  name="Order Status" id="">
                      <option value="">Return Orders</option>
                      <option value="">Incomplete Order information</option>
@@ -328,38 +335,41 @@ const coloumn=[
                  </div>
              <div style={{marginTop:'20px'}} ><p><button style={serchbtn}>Search</button><span><button style={Clearbtn} >Clear</button></span></p></div>
            </div>
+           
+           
             </div>
-
-            <div >
-              
-           <div   style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1500px',marginRight:'100px' }}>
-           <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1500px',marginRight:'100px'}}>
-             <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
+            <div style={{marginTop:'20px'}}>
+           <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' ,overflowX:'scroll'}}>
+           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' }}>
+            <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1620px',marginRight:'100px'}}>
+            <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
              
              <div className='col-md-auto'><button style={Order}>Order Source</button></div>
+             <div className='col'><button style={Order}>Product Name</button></div>
              
-             <div className='col-md-auto'><button style={Order}>Quantity</button></div>
+             <div className='col'><button style={Order}>Quantity</button></div>
            
            
              <div className='col-md-auto'><button style={Order}>Paid Time</button></div>
-             <div className='col-md-auto'><button style={Order}>Status</button></div>
+             <div className='col'><button style={Order}>Status</button></div>
              <div className='col-md-auto'><button style={Order}>Shipping Info</button></div>
              <div className='col-md-auto'><button style={Order}>Shipping Info</button></div>
              <div className='col-md-auto'><button style={Order}>Shipping Method</button></div>
              <div className='col-md-auto'><button style={Order}>Tracking Number </button></div>
-             <div className='col-md-auto'><button style={Order}>Amount</button></div>
-             <div className='col-md-auto'><button style={Order}>Action</button></div>
+             <div className='col'><button style={Order}>Amount</button></div>
+             <div className='col'><button style={Order}>Action</button></div>
 
-
-           </div>
-           </div>
             </div>
+           </div>
+           </div>
+           </div>
+
 
           
         </div>
            </Tab.Panel>
            <Tab.Panel>
-           <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto',overflowX:'scroll'  }}>
+           <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto'  }}>
            <div style={{ display: 'block',color:'black',padding:'20px',borderRadius:'30px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)"}}>
            <div className='Dashboardheading'><h3>Processing</h3></div>
            <div className="row">
@@ -384,27 +394,32 @@ const coloumn=[
              <div style={{marginTop:'20px'}}><p><button style={serchbtn}>Search</button><span><button style={Clearbtn} >Clear</button></span></p></div>
            </div>
            </div>
-          
-           <div   style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1500px'}}>
-           <div className='row' style={{padding:'7px',marginTop:'20px',backgroundColor:'#FDE31A',borderRadius:'20px',marginRight:'100px'}}>
-             <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
+           <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' ,overflowX:'scroll'}}>
+           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' }}>
+            <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1700px',marginRight:'100px'}}>
+            <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
              
-             <div className='col-md-auto'><button style={Order}>Order Source</button></div>
-             <div className='col-md-auto'><button style={Order}>Quantity</button></div>
-             <div className='col-md-auto'><button style={Order}>Paid Time</button></div>
-             <div className='col-md-auto'><button style={Order}>Status</button></div>
+             <div className='col'><button style={Order}>Order Source</button></div>
+             <div className='col'><button style={Order}>Product Name</button></div>
+             <div className='col'><button style={Order}>Quantity</button></div>
+             <div className='col'><button style={Order}>Paid Time</button></div>
+             <div className='col'><button style={Order}>Status</button></div>
              <div className='col-md-auto'><button style={Order}>Shipping Info</button></div>
              <div className='col-md-auto'><button style={Order}>Shipping Method</button></div>
              <div className='col-md-auto'><button style={Order}>Tracking Number</button></div>
-             <div className='col-md-auto'><button style={Order}>Amount</button></div>
-             <div className='col-md-auto'><button style={Order}>Action</button></div>
-          </div>
+             <div className='col'><button style={Order}>Amount</button></div>
+             <div className='col'><button style={Order}>Action</button></div>
+
+            </div>
            </div>
+           </div>
+          
+          
           
          </div>
            </Tab.Panel>
            <Tab.Panel>
-           <div className='container'  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto',overflowX:'scroll'  }}>
+           <div className='container'  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto'  }}>
             <div style={{ display: 'block',color:'black',padding:'20px',borderRadius:'30px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)"}}>
             <div className='Dashboardheading'><h3>Dispatched</h3></div>
         <div className='row' style={{marginTop:'20px'}}>
@@ -420,29 +435,31 @@ const coloumn=[
              <div style={{marginTop:'20px'}} ><p><button style={serchbtn}>Search</button><span><button style={Clearbtn} >Clear</button></span></p></div>
            </div>
             </div>
+            <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' ,overflowX:'scroll'}}>
+           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' }}>
+            <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1600px',marginRight:'100px'}}>
+            <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
+            <div className='col'><button style={Order}>Product Name</button></div>
+            <div className='col-md-auto'><button style={Order}>Order Source</button></div>
+            <div className='col-md-auto'><button style={Order}>Quantity</button></div>
+            <div className='col-md-auto'><button style={Order}>Paid Time Dispatch time</button></div>
+            <div className='col-md-auto'><button style={Order}>Status</button></div>
+            <div className='col-md-auto'><button style={Order}>Shipping Info</button></div>
+            <div className='col-md-auto'><button style={Order}>Shipping Method</button></div>
+            <div className='col-md-auto'><button style={Order}>Tracking Number</button></div>
+            <div className='col-md-auto'><button style={Order}>Amount</button></div>
+            <div className='col-md-auto'><button style={Order}>Action</button></div>
+
+            </div>
+           </div>
+           </div>
          
-           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1600px' }}>
-           <div className='row' style={{padding:'7px',marginTop:'20px',backgroundColor:'#FDE31A',borderRadius:'20px',marginRight:'100px'}}>
-             <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
-            
-             <div className='col-md-auto'><button style={Order}>Order Source</button></div>
-             <div className='col-md-auto'><button style={Order}>Quantity</button></div>
-             <div className='col-md-auto'><button style={Order}>Paid Time Dispatch time</button></div>
-             <div className='col-md-auto'><button style={Order}>Status</button></div>
-             <div className='col-md-auto'><button style={Order}>Shipping Info</button></div>
-             <div className='col-md-auto'><button style={Order}>Shipping Method</button></div>
-             <div className='col-md-auto'><button style={Order}>Tracking Number</button></div>
-             <div className='col-md-auto'><button style={Order}>Amount</button></div>
-             <div className='col-md-auto'><button style={Order}>Action</button></div>
-
-
-           </div>
-           </div>
+          
         
         </div>
            </Tab.Panel>
            <Tab.Panel>
-           <div className='container'  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',overflowX:'scroll' }}>
+           <div className='container'  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px'}}>
            <div style={{ display: 'block',color:'black',padding:'20px',borderRadius:'30px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)"}}>
            <div className='Dashboardheading'><h3>Completed</h3></div>
            <div className='row' >
@@ -459,9 +476,11 @@ const coloumn=[
            </div>
            </div>
            
-           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1600px' }}>
-           <div className='row' style={{padding:'5px',marginTop:'20px',backgroundColor:'#FDE31A',borderRadius:'20px',width:'1500px',marginRight:'100px'}}>
-             <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
+        
+            <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' ,overflowX:'scroll'}}>
+           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' }}>
+            <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1500px',marginRight:'100px'}}>
+            <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
              
              <div className='col-md-auto'><button style={Order}>Order Source</button></div>
              <div className='col-md-auto'><button style={Order}>Quantity</button></div>
@@ -473,7 +492,7 @@ const coloumn=[
              <div className='col-md-auto'><button style={Order}>Amount</button></div>
              <div className='col-md-auto'><button style={Order}>Action</button></div>
 
-
+            </div>
            </div>
            </div>
            
@@ -481,7 +500,7 @@ const coloumn=[
           
            </Tab.Panel>
            <Tab.Panel>
-           <div className='container'  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto',overflowX:'scroll'  }}>
+           <div className='container'  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' }}>
            <div style={{ display: 'block',color:'black',padding:'20px',borderRadius:'30px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)"}}>
            <div className='Dashboardheading'><h3>Closed</h3></div>
            <div className='row' style={{marginTop:'20px'}}>
@@ -497,9 +516,10 @@ const coloumn=[
              <div style={{marginTop:'20px'}}><p><button style={serchbtn}>Search</button><span><button style={Clearbtn} >Clear</button></span></p></div>
            </div>
            </div>
-         
-           <div className='row' style={{padding:'5px',marginTop:'20px',backgroundColor:'#FDE31A',borderRadius:'20px',width:'1500px',marginRight:'100px'}}>
-             <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
+           <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' ,overflowX:'scroll'}}>
+           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' }}>
+            <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1500px',marginRight:'100px'}}>
+            <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
              
              <div className='col-md-auto'><button style={Order}>Order Source</button></div>
              <div className='col-md-auto'><button style={Order}>Quantity</button></div>
@@ -511,13 +531,16 @@ const coloumn=[
              <div className='col-md-auto'><button style={Order}>Amount</button></div>
              <div className='col-md-auto'><button style={Order}>Action</button></div>
 
-
+            </div>
            </div>
+           </div>
+         
+          
            </div>
         
            </Tab.Panel>
            <Tab.Panel>
-           <div className='container'  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto',overflowX:'scroll'  }}>
+           <div className='container'  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto'}}>
            <div style={{ display: 'block',color:'black',padding:'20px',borderRadius:'30px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)"}}>
            <div className='Dashboardheading'><h3>Return Orders</h3></div>
            <div><p>1. Additional information required to be filled in. Otherwise, delivery time will be affected.</p></div>
@@ -530,20 +553,24 @@ const coloumn=[
            </div>
            </div>
           
-           <div   style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1200px'  }}>
-           <div className='row' style={{padding:'5px',marginTop:'20px',backgroundColor:'#FDE31A',borderRadius:'20px',width:'1200px',marginRight:'100px'}}>
-             <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
+           <div  >
+           <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' ,overflowX:'scroll'}}>
+           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' }}>
+            <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1200px',marginRight:'100px'}}>
+            <div className='col-md-auto'><button style={Order}>Your Order Number</button></div>
              
              <div className='col-md-auto'><button style={Order}>Order Source</button></div>
-             <div className='col-md-auto'><button style={Order}>Quantity</button></div>
-             <div className='col-md-auto'><button style={Order}>Amount</button></div>
+             <div className='col'><button style={Order}>Quantity</button></div>
+             <div className='col'><button style={Order}>Amount</button></div>
              <div className='col-md-auto'><button style={Order}>Paid Time</button></div>
              <div className='col-md-auto'><button style={Order}>Shipping Method</button></div>
-             <div className='col-md-auto'><button style={Order}>Reasons</button></div>
-             <div className='col-md-auto'><button style={Order}>Actions</button></div>
+             <div className='col'><button style={Order}>Reasons</button></div>
+             <div className='col'><button style={Order}>Actions</button></div>
 
-
+            </div>
            </div>
+           </div>
+          
            </div>
           
             </div>

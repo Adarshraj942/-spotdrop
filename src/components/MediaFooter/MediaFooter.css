@@ -4,7 +4,7 @@
     bottom: 0;
    margin-left: 2%;
    margin-right: 2%;
-    width: 96%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     background: #1F1E1A;
@@ -25,9 +25,7 @@ border-radius: 20px;
     justify-content: center;
     align-items: center;
   }
-  .bloc-icon img {
-    width: 30px;
-  }
+ 
   #MediaFooterconteriner {
     display:none;
     }
@@ -61,4 +59,17 @@ border-radius: 20px;
        
     }
     
+  }
+
+  
+  @media screen and (max-width: 300px){
+    .btnFooter{
+      background-color:#FFD600;
+      border-color:transparent;
+     font-size:10px;
+     color:black;
+     border-radius:20px;
+     margin-top: 10px;
+     font-weight: 650;
+  }
   }

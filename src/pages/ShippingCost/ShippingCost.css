@@ -45,4 +45,25 @@ label{
 #ShippingCost{
     display:block;
 }
+.selectbox{
+    width:100px;
+    color:black;
+    font-size: 15px;
+    font-weight: 500;
+}
+}
+
+@media screen and (max-width: 300px){
+    .selectbox{
+        width:200px;
+        color:black;
+        font-size: 15px;
+        font-weight: 500;
+    } 
+    #cars{
+        height: 40px;
+        width: 200px;
+        margin: 10px;
+        float: left;
+    }
 }

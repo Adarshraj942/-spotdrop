@@ -117,7 +117,7 @@ function SellerWishlist() {
     <>
     <Adminnavbar />
 
-    <div className='row' style={{backgroundColor:'#32333A',padding:'0px 0px 100px 0px'}}>
+    <div className='row' style={{backgroundColor:'#32333A',padding:'0px 0px 0px 0px'}}>
     <div className='col-2' ><SellerSidebar /></div>
       <div className='col-10'>
   <div className='container' id='tabcontainer' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px',padding:'40px',width:'auto',margin:'10px 20px 10px 20px',}}>
@@ -139,7 +139,7 @@ function SellerWishlist() {
                 <input style={skubnt}  placeholder='Enter SKU/Product Name' type="text" />
               </div>
 
-              <div className='row'>
+              <div className='row' style={{marginTop:'20px'}}>
                 <div className='col-2'>
                 <button style={serchbtn}>Search</button>
                 </div>
@@ -154,30 +154,38 @@ function SellerWishlist() {
              
             </div>
       </div>
- 
-     <div className='container'>
-     <div className='row' style={{marginTop:'20px',backgroundColor:'#FFE51A',padding:'5px'}}>
-            
-            <div className='col'><button style={btns}>Date</button></div>
+      <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto',overflowX:'scroll' }}>
+           <div style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1000px'}}>
+             <div >
+             <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px' }}>
+             <div className='col'><button style={btns}>Date</button></div>
             <div className='col'><button  style={btns}>Images</button></div>
             <div className='col'><button  style={btns}>Title</button></div>
             <div className='col'><button  style={btns}>Product Price</button></div>
             <div className='col'><button  style={btns}>Actions</button></div>
-          </div>
-          <DataTable 
+               </div>
+               <div className="row" >
+             <DataTable 
         
         columns={coloumn} 
-      data={filterUsers} 
+        data={filterUsers} 
         pagination
-        fixedHeader
-        style={{color:"red"}}
-        highlightOnHover
-        subHeader
       
-        subHeaderAlign="center"
+         
+        highlightOnHover
+      
+        
+      
         // data={data}
-      />  
-     </div>
+      />
+             </div>
+           
+             </div>
+           </div>
+
+         </div>
+ 
+    
 
    
   </div>

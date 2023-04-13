@@ -5,6 +5,7 @@ import Myinventry from '../myinventry/Myinventry';
 import MyPhotography from '../MyPhotography/MyPhotography';
 import OrderTracking from '../OrdersTracking/OrderTracking';
 import './Sidebar.css'
+import MyDropspot from '../MyDropspot';
 
 
 
@@ -71,8 +72,8 @@ const ServiceProduct=()=>{
 const Authentication=()=>{
   history.push('Authentication')
 }
-const MyCj =()=>{
-  history.push('MyCj')
+const MyDropspot =()=>{
+  history.push('MyDropspot')
 }
 const Diaries =()=>{
   history.push('CreatePage')
@@ -85,7 +86,7 @@ const Diaries =()=>{
             <div className="sidebar-offcanvas" id="sidebar" role="navigation">  
               <ul className="flex-column pl-0 mt-4">
               <li  >  
-                  <a> <button  onClick={MyCj} className='dropbtnsubmenu'> Dashboard</button></a>  
+                  <a> <button  onClick={MyDropspot} className='dropbtnsubmenu'> Dashboard</button></a>  
                  
                 </li>  
                 {/* <li className="nav-item">  

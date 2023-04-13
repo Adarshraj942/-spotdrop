@@ -10,7 +10,7 @@ import credit from '.././assets/credit.png'
 import avatar from '.././assets/avatar.png'
 import { useHistory } from 'react-router-dom'
 
-function MyCj() {
+function MyDropspot() {
 
   const btn={
     backgroundColor:'rgba(253, 227, 26, 1)',
@@ -122,5 +122,5 @@ function MyCj() {
   )
 }
 
-export default MyCj
+export default MyDropspot
 

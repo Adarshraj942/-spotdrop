@@ -4,11 +4,9 @@ import SellerSidebar from '../SellerDashboard/SellerSidebar'
 import 'bootstrap/dist/css/bootstrap.css';
 import { Tab } from '@headlessui/react';
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import './SellerDispute.css'
 function SellerDispute() {
@@ -147,12 +145,20 @@ function SellerDispute() {
            <input type="File" />
           </div>
         </div>
+        <div className='fleg' style={{display:'flex',justifyContent:'space-between',marginTop:'20px'}}>
+          <div className='flo' style={{justifyContent:'left'}}>
+           <h6>Message</h6>
+          </div>
+          <div className='flh' style={{float:'right'}}>
+           <textarea className='textarea' name="" id="" cols="35" rows="10"></textarea>
+          </div>
+        </div>
       </form>
         </DialogContent>
-        <DialogActions>
-          <Button className='clear' onClick={handleClose}>Cancel</Button>
-          <Button className='product' onClick={handleClose}>Submit</Button>
-        </DialogActions>
+        <div align='center' style={{marginBottom:'20px'}}>
+          <Button className='clear' style={{backgroundColor:'black',color:'white'}} onClick={handleClose}>Cancel</Button>
+          <Button className='product' style={{backgroundColor:'rgba(253, 227, 26, 1)',color:'black',marginLeft:'20px'}} onClick={handleClose}>Submit</Button>
+        </div>
       </Dialog>
     </div>
              
@@ -160,7 +166,8 @@ function SellerDispute() {
           
           <Tab.Panels style={tabpanls}>
             <Tab.Panel>
-            <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px' }}>
+          <div>
+          <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',padding:'20px' }}>
            
            <div className='row' >
            <div className='Dashboardheading'><h3>Awaited Responses</h3></div>
@@ -176,31 +183,37 @@ function SellerDispute() {
 
           </div>
           <div style={{marginTop:'20px'}}><button style={serachbtn}>Search</button></div>
-          <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',padding:'10px',borderRadius:'20px'}}>
-           
-           <div className='col-md-auto'><p> Order Number</p></div>
-          
-           <div className='col-md-auto'><p>Tracking Number</p></div>
-           <div className='col-md-auto'><p>Dispute Reason</p></div>
-           <div className='col-md-auto'>
-           <p>Expected Solution</p>
-           </div>
-           <div className='col-md-auto'>
-           <p>Created Date</p>
-           </div>
-           <div className='col-md-auto'>
-            <p>Status</p>
-           </div>
-           <div className='col-md-auto'>
-            <p>Action</p>
-           </div>
-          
-          
-         </div> 
+        
+         
         </div>
+        <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' ,overflowX:'scroll'}}>
+           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'1100px' }}>
+            <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1300px',marginRight:'100px'}}>
+            <div className='col'><p> Order Number</p></div>
+          
+          <div className='col'><p>Tracking Number</p></div>
+          <div className='col'><p>Dispute Reason</p></div>
+          <div className='col'>
+          <p>Expected Solution</p>
+          </div>
+          <div className='col'>
+          <p>Created Date</p>
+          </div>
+          <div className='col'>
+           <p>Status</p>
+          </div>
+          <div className='col'>
+           <p>Action</p>
+          </div>
+
+
+            </div>
+           </div>
+           </div>
+          </div>
             </Tab.Panel>
             <Tab.Panel>
-            <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px' }} >
+            <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',padding:'20px' }} >
             <div className='Dashboardheading'><h3>Completed</h3></div>
       <div className='row' >
             <div className='col'><input type="date" style={skubnt}  placeholder='Please enter order number' /></div>
@@ -215,7 +228,11 @@ function SellerDispute() {
 
           </div>
           <div style={{marginTop:'20px'}}><button style={serachbtn}>Search</button></div>
-          <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',padding:'10px',borderRadius:'20px'}}>
+          
+      </div>
+      <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' ,overflowX:'scroll'}}>
+           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' }}>
+            <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1500px',marginRight:'100px'}}>
             <div className='col'><p> Order Number</p></div>
             <div className='col'><p> Order Number</p></div>
             <div className='col'>
@@ -231,14 +248,15 @@ function SellerDispute() {
             </div>
             <div className='col'><p>Status</p></div>
             <div className='col'><p>Action</p></div>
-          
-            
-          </div>
-      </div>
+
+
+            </div>
+           </div>
+           </div>
             </Tab.Panel>
             <Tab.Panel>
                                 
-       <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px' }} >
+       <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',padding:'20px' }} >
        <div className='Dashboardheading'><h3>Closed</h3></div>
        <div className='row'  style={{marginTop:'20px'}}>
             <div className='col'><input type="date" style={skubnt}  placeholder='Please enter order number' /></div>
@@ -253,7 +271,11 @@ function SellerDispute() {
 
           </div>
           <div style={{marginTop:'20px'}}><button style={serachbtn}>Search</button></div>
-          <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',padding:'10px',borderRadius:'20px'}}>
+         
+       </div>
+       <div className='container' style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' ,overflowX:'scroll'}}>
+           <div  style={{ display: 'block',color:'black',padding:'10px',borderRadius:'30px',width:'auto' }}>
+            <div className='row' style={{padding:'7px',backgroundColor:'#FDE31A',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px',width:'1500px',marginRight:'100px'}}>
             <div className='col'><p> Order Number</p></div>
           
             <div className='col'>
@@ -269,8 +291,11 @@ function SellerDispute() {
             </div>
            <div className='col'><p>Status</p></div>
            <div className='col'><p>Action</p></div>
-          </div>
-       </div>
+
+
+            </div>
+           </div>
+           </div>
             </Tab.Panel>
           </Tab.Panels>
     </Tab.Group>

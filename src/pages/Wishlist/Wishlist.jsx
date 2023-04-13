@@ -119,11 +119,11 @@ const [filterUsers,setFilteredUsers]=useState([]);
   ]
   return (
     
-    <div style={{backgroundColor:'#31343A',padding:'0px 0px 100px 0px'}}>
+    <div style={{backgroundColor:'#31343A',padding:'0px 0px 0px 0px'}}>
         <Adminnavbar />
     <div className='row'>
     <div className='col-2' ><Sidebar /></div>
-      <div className='col-10'>
+      <div className='col-10' style={{height:'800px'}}>
   <div className='container' id='tabcontainer' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px',margin:'20px',width:'auto'}}>
       <div className='container' style={{marginTop:'20px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px'}}>
       <div style={{justifyContent:'left',padding:'20px'}}> <h2>WishList</h2> </div>

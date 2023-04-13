@@ -80,10 +80,7 @@ const header={
     marginTop:'40px'
   
   }
-const product={
-  color:'black',
-  paddingTop:'10px'
-}
+
 export const MediaProducts = () => {
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);

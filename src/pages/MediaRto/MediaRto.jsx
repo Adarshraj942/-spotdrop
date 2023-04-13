@@ -8,7 +8,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import MediaFooter from '../../components/MediaFooter/MediaFooter';
+
 import MediaNavbar from '../../components/MediaNavbar/MediaNavbar';
 import leftarrow from '../../assets/leftarrow.png'
 
@@ -28,20 +28,6 @@ const serchbtn={
       
        }
 
-       const paybtn={
-        backgroundColor:'#FDE31A',
-        borderColor:'transparent',
-        borderRadius:'10px',
-        
-        padding:'10px',
-        outlineColor:'#FDE31A',
-        marginRight:'10px',
-        fontSize:'15px',
-        width:'150px',
-        fontWeight:'650',
-        boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
-       }
-      
        const Clearbtn={
         backgroundColor:'black',
         borderColor:'transparent',
@@ -108,19 +94,6 @@ const serchbtn={
      
       outlineColor:'rgba(0, 0, 0, 0.15)',  
      }
-
-const buttonheader={
-  backgroundColor:'#FDE31A',
-  borderRadius:'15px',
-  width:'auto',
-  alignItems:'center',
-  height:'80px',
-  alignSelf:'center'
-  
-}
-
-
-
 
 function TabPanel(props) {
 
@@ -517,7 +490,7 @@ export default function BasicTabs() {
       </TabPanel>
      
     </Box>
-    <MediaFooter />
+
 </div>
   );
 }

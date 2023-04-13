@@ -4,14 +4,9 @@ import service from '../../assets/service.png'
 import './Shopnavbar'
 import logo from '../../assets/logo.png'
 import sorce from '../../assets/sorce.png'
-import { useHistory } from 'react-router-dom'
-
-
-
-
 
 function Shopnavbar() {
-  const history=useHistory()
+
   return (
 
     <div className="navbarContainer">
@@ -39,7 +34,7 @@ function Shopnavbar() {
       
       <li className='listitem' > Source more<span classname="badge" />
       </li>
-      <li className='listitem'><span><img src={sorce} style={{width:'auto',height:'auto',borderRadius:'20px',borderColor:'transparent'}} /></span> Queue<span classname="badge" /></li>
+
       <li className='listitem'><span><img src={service}  style={{width:'auto',height:'auto',borderRadius:'20px',borderColor:'transparent'}} /></span><div className="dropdown">
           <button className="dropbtn">Tools</button>
           <div className="dropdown-content">

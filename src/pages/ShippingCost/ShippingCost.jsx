@@ -1,12 +1,15 @@
 import React from 'react'
 import './ShippingCost.css'
 import  shippingcost from '../../assets/shippingCost.png'
+import MediaNavbar from '../../components/MediaNavbar/MediaNavbar'
 
 
 
 function ShippingCost() {
 
   return (
+    <>
+     <MediaNavbar />
     <div id="ShippingCost" className='container-fluid'  >
       
       <div align="center" style={{marginTop:'40px'}}> <p><img src={shippingcost} alt="" /> <span><h5 className='shippingheading'>Shipping Cost</h5></span></p></div>
@@ -26,7 +29,7 @@ function ShippingCost() {
             </div>
             <div>
               <label htmlFor="cars">Shipping From:</label>
-              <select id="cars" name="cars">
+              <select className='selectbox' id="cars" name="cars">
                 <option value="volvo">Please Select</option>
                 <option value="saab">Saab</option>
                 <option value="fiat">Fiat</option>
@@ -36,7 +39,7 @@ function ShippingCost() {
             <br />
             <div >
               <label  htmlFor="cars" >Shipping To</label>
-              <select id="cars" name="cars" style={{width:'300px'}}>
+              <select className='selectbox' id="cars" name="cars" >
                 <option value="volvo">Please Select</option>
                 <option value="saab">Saab</option>
                 <option value="fiat">Fiat</option>
@@ -46,16 +49,20 @@ function ShippingCost() {
             <br />
             <div>
               <label htmlFor="cars">Postcode</label>
-              <input id="cars" type="text" name />
+              <input className='selectbox' id="cars" type="text" name />
             </div>
             <div>
               <label htmlFor="cars">Shipping Method</label>
-              <select id="cars" name="cars" >
+              <select className='selectbox' id="cars" name="cars" >
                 <option value="volvo">All</option>
                 <option value="saab">Saab</option>
                 <option value="fiat">Fiat</option>
                 <option value="audi">Audi</option>
               </select>
+            </div>
+            <div>
+            <label htmlFor="cars">weight</label>
+              <input className='selectbox' id="cars" type="number" name />
             </div>
             
             <label>Attributes</label>
@@ -86,10 +93,7 @@ function ShippingCost() {
               <label htmlFor="horns" style={{color:'black'}}>Flat</label>&nbsp;
             </div>
             <div>
-            <div>
-            <label htmlFor="cars">weight</label>
-              <input id="cars" type="number" name />
-            </div>
+            
             </div>
           </form>
           
@@ -98,6 +102,9 @@ function ShippingCost() {
       </div>
       </div>
     </div>
+    
+    </>
+   
   )
 }
 

@@ -95,3 +95,13 @@
     
     }
   }
+
+  @media only screen and (max-width: 300px){
+    .containerform{
+        background-color:white;
+        border-radius:20px;
+        width:230px;
+        box-shadow:4px 4px 2px 2px dimgrey;
+        text-align: center; 
+    }
+  }

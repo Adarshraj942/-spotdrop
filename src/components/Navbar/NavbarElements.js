@@ -4,6 +4,7 @@ import styled from 'styled-components';
   
 export const Nav = styled.nav`
  background-color:rgba(255, 255, 255, 1);
+width:100%;
 
   height: 50px;
   display: flex;
@@ -12,11 +13,7 @@ export const Nav = styled.nav`
   z-index: 12;
   border-radius:20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  &:hover {
-   
-  
-    background:rgba(255, 255, 255, 1);
-  }
+ 
 
   text-decoration:none;
   /* Third Nav */
@@ -26,7 +23,8 @@ export const Nav = styled.nav`
   }
 
   a:hover{
-    background-color:rgba(255, 255, 255, 1);
+    background-color:rgb(255, 214, 0);
+    color:black;
   }
 `;
   
@@ -36,19 +34,15 @@ display:none
   
 }
 color:black;
+
   display: flex;
   text-decoration:none;
   align-items: center;
-
+  margin-left:5px;
   text-decoration: none;
   padding: 0 1.5rem;
   height: 100%;
-  cursor: pointer;
- 
-
- 
-
-  
+  cursor: pointer; 
 `;
   
 export const Bars = styled(FaBars)`
@@ -59,7 +53,7 @@ export const Bars = styled(FaBars)`
     position: absolute;
     top: 0;
    
-    right: 0;
+    
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
     cursor: pointer;
@@ -70,12 +64,13 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-
+ 
+margin-left:130px;
   /* Second Nav */
   /* margin-right: 24px; */
   /* Third Nav */
-  margin-left:10%;
-  width:100px;
+  
+ 
 
   white-space: nowrap; */
   @media screen and (max-width: 768px) {
@@ -88,6 +83,7 @@ export const NavBtn = styled.nav`
   align-items: center;
  
   margin-right: 24px;
+ 
   /* Third Nav */
   /* justify-content: flex-end;
   width: 200vw; */
@@ -110,7 +106,7 @@ export const NavBtnLink = styled(Link)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
+    background-color: black;
     color: green;
   }
 `;

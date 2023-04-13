@@ -85,7 +85,7 @@ const handelTabCLick = (e) => {
       <Adminnavbar />
       <div className='row'>
         <div className='col-2'  style={{backgroundColor:'#31343A'}}><Sidebar /></div>
-        <div className='col-10'>
+        <div className='col-10' style={{height:'800px'}}>
        
         <div className='container' id="tabcontainer" style={{margin:'20px 0px 20px 10px',width:'1100px', padding:'20px',}}>
         <div className='headingAll'><h2>Imported Order</h2></div>

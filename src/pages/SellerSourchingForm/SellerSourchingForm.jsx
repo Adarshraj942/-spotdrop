@@ -189,18 +189,7 @@ function SellerSourchingForm() {
       }
     }
   
-    const tabheader={
-      backgroundColor:'#FFE51A',
-      borderColor:'transparent',
-      border:' 0.5px solid rgba(0, 0, 0, 0.25)',
-      width:'auto',
-      padding:'10px',
-      fontWeight:'800',
-      height:'50px',
-      alignItems:'center',
-      borderRadius:"10px",
-      margin:'15px 5px 15px 5px'  
-    }
+
   
     const buttonheader={
       backgroundColor:'#FDE31A',
@@ -228,7 +217,7 @@ function SellerSourchingForm() {
       <div className='col-2'>
         <SellerSidebar />
       </div>
-      <div className='col-10'>
+      <div className='col-10' >
       <div className='container' id="tabcontainer" style={{margin:'20px 0px 20px 10px',width:'1100px', padding:'20px',}}>
     <div className='headingAll'><h2>Sourcing </h2></div>
     <Tab.Group>

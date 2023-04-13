@@ -8,7 +8,7 @@ import 'react-js-dialog-box/dist/index.css';
 import leftarrow from '../../assets/leftarrow.png'
 
 import MediaNavbar from '../../components/MediaNavbar/MediaNavbar'
-import MediaFooter from '../../components/MediaFooter/MediaFooter';
+
 
 
 function SellerMediaWishlist() {
@@ -125,7 +125,7 @@ function SellerMediaWishlist() {
       </div>
 
     </div>
-    <MediaFooter />
+   
 </div>
   )
 }

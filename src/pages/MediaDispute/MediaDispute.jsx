@@ -4,7 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import MediaFooter from '../../components/MediaFooter/MediaFooter';
+
 import MediaNavbar from '../../components/MediaNavbar/MediaNavbar';
 import leftarrow from '../../assets/leftarrow.png'
 
@@ -275,7 +275,7 @@ export default function BasicTabs() {
       </div>
       </TabPanel>
     </Box>
-    <MediaFooter />
+
 </div>
   );
 }

@@ -134,7 +134,7 @@ function UndeleviredOrder() {
       </div>
       <div className='row'>
       <div className='col-2'  style={{backgroundColor:'#31343A'}}><Sidebar /></div>
-      <div className='col-10'>
+      <div className='col-10' style={{height:'800px'}}>
     
       <div className='container' id="tabcontainer" style={{margin:'10px 20px 10px 10px',width:'auto', padding:'10px'}}>
       <div className='headingAll'><h2>RTO</h2></div>

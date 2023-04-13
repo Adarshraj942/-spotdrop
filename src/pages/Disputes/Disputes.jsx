@@ -108,7 +108,7 @@ const Disputes = () => {
       <Adminnavbar />
       <div className='row'>
         <div className='col-2'  ><Sidebar /></div>
-        <div className='col-10'>
+        <div className='col-10' style={{height:'800px'}}>
        
         <div className='container' id="tabcontainer" style={{margin:'20px 0px 20px 10px',width:'1100px', padding:'20px',}}>
         <div className='headingAll'><h2>Disputes</h2></div>
@@ -129,9 +129,9 @@ const Disputes = () => {
           
           <Tab.Panels style={tabpanls}>
             <Tab.Panel>
-            <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px' }}>
-           
-           <div className='row' >
+            <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px',padding:'20px'}} >
+            <div className='Dashboardheading'><h3>Orders</h3></div>
+            <div className='row' >
            <div className='Dashboardheading'><h3>Awaited Responses</h3></div>
             <div className='col'><input type="date" style={skubnt}  placeholder='Please enter order number' /></div>
            
@@ -147,33 +147,34 @@ const Disputes = () => {
             </div>
 
           </div>
-
-          <div style={{marginTop:'20px'}} ><p><button style={serchbtn}>Search</button><span><button style={Clearbtn} >Clear</button></span></p></div>
-          <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',padding:'10px',borderRadius:'20px'}}>
-           
-           <div className='col'><p> Order Number</p></div>
+       
+               
+         </div>
+          <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px',marginTop:'10px'}}  >
+               <div className='row' style={{backgroundColor:'#FDE31A',padding:'15px 2px 5px 2px',color:'black',borderRadius:'20px'}}>
+                    
+           <div className='col-md-auto'><p> Order Number</p></div>
           
-           <div className='col'><p>Tracking Number</p></div>
-           <div className='col'><p>Dispute Reason</p></div>
-           <div className='col'>
-           <p>Expected Solution</p>
-           </div>
-           <div className='col'>
-           <p>Created Date</p>
-           </div>
-           <div className='col'>
-            <p>Status</p>
-           </div>
-           <div className='col'>
-            <p>Action</p>
-           </div>
+          <div className='col-md-auto'><p>Tracking Number</p></div>
+          <div className='col-md-auto'><p>Dispute Reason</p></div>
+          <div className='col-md-auto'>
+          <p>Expected Solution</p>
+          </div>
+          <div className='col-md-auto'>
+          <p>Created Date</p>
+          </div>
+          <div className='col'>
+           <p>Status</p>
+          </div>
+          <div className='col'>
+           <p>Action</p>
+          </div>
+          </div>
+            </div>
           
-          
-         </div> 
-        </div>
             </Tab.Panel>
             <Tab.Panel>
-            <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px' }} >
+            <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px',padding:'20px'}} >
             <div className='Dashboardheading'><h3>Completed</h3></div>
       <div className='row' >
             <div className='col'><input type="date" style={skubnt}  placeholder='Please enter order number' /></div>
@@ -188,33 +189,34 @@ const Disputes = () => {
             </div>
 
           </div>
+       
+               
+         </div>
+          <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px',marginTop:'10px'}}  >
+               <div className='row' style={{backgroundColor:'#FDE31A',padding:'15px 2px 5px 2px',color:'black',borderRadius:'20px'}}>
+                    
+               <div className='col-md-auto'><p> Order Number</p></div>
           
-          <div style={{marginTop:'20px'}} ><p><button style={serchbtn}>Search</button><span><button style={Clearbtn} >Clear</button></span></p></div>
-          <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',padding:'10px',borderRadius:'20px'}}>
-            <div className='col'><p> Order Number</p></div>
-          
-            <div className='col'>
-            <p>Tracking Number</p>
-            </div>
-           
-            <div className='col'><p>Dispute Reason</p></div>
-            <div className='col'>
-            <p>Expected Solution</p>
-            </div>
-            <div className='col'>
-            <p>Created Date</p>
-            </div>
-            <div className='col'><p>Status</p></div>
-            <div className='col'><p>Action</p></div>
-          
-            
+          <div className='col-md-auto'>
+          <p>Tracking Number</p>
           </div>
-      </div>
+         
+          <div className='col-md-auto'><p>Dispute Reason</p></div>
+          <div className='col-md-auto'>
+          <p>Expected Solution</p>
+          </div>
+          <div className='col-md-auto'>
+          <p>Created Date</p>
+          </div>
+          <div className='col'><p>Status</p></div>
+          <div className='col'><p>Action</p></div>
+          </div>
+            </div>
+          
             </Tab.Panel>
             <Tab.Panel>
-                                
-       <div className='container' style={{ display: 'block',color:'black',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px' }} >
-       <div className='Dashboardheading'><h3>Closed</h3></div>
+            <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px',padding:'20px'}} >
+            <div className='Dashboardheading'><h3>Closed</h3></div>
        <div className='row'  style={{marginTop:'20px'}}>
             <div className='col'><input type="date" style={skubnt}  placeholder='Please enter order number' /></div>
 
@@ -227,26 +229,32 @@ const Disputes = () => {
             </div>
 
           </div>
+      
+       
+               
+         </div>
+          <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px',marginTop:'10px'}}  >
+               <div className='row' style={{backgroundColor:'#FDE31A',padding:'15px 2px 5px 2px',color:'black',borderRadius:'20px'}}>
+                    
+               <div className='col-md-auto'><p> Order Number</p></div>
           
-          <div style={{marginTop:'20px'}} ><p><button style={serchbtn}>Search</button><span><button style={Clearbtn} >Clear</button></span></p></div>
-          <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',padding:'10px',borderRadius:'20px'}}>
-            <div className='col'><p> Order Number</p></div>
-          
-            <div className='col'>
-            <p>Tracking Number</p>
-            </div>
-           
-            <div className='col'><p>Dispute Reason</p></div>
-            <div className='col'>
-            <p>Expected Solution</p>
-            </div>
-            <div className='col'>
-            <p>Created Date</p>
-            </div>
-           <div className='col'><p>Status</p></div>
-           <div className='col'><p>Action</p></div>
+          <div className='col-md-auto'>
+          <p>Tracking Number</p>
           </div>
-       </div>
+         
+          <div className='col-md-auto'><p>Dispute Reason</p></div>
+          <div className='col-md-auto'>
+          <p>Expected Solution</p>
+          </div>
+          <div className='col'>
+          <p>Created Date</p>
+          </div>
+         <div className='col'><p>Status</p></div>
+         <div className='col'><p>Action</p></div>
+          </div>
+            </div>
+                                
+      
             </Tab.Panel>
           </Tab.Panels>
     </Tab.Group>
